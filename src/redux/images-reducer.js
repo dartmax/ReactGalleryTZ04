@@ -1,4 +1,4 @@
-import {getCommentsAPI} from '../api/getPhoto-api';
+import {getImagesAPI} from '../api/getImages-api';
 
 let initialState = {};
 
@@ -17,10 +17,19 @@ const imagesReducer = (state = initialState, action) => {
   }
 };
 
+
+
 export const actions = {
-  getImagesUrl: (imagesUrl) => ({
+  getImagesSuccess: (imagesUrl) => ({
     type: GET_IMAGES, payload: {imagesUrl}
   })
 }
+
+export const getImagesUrl = () => async (dispatch) => {
+  const data = await getImagesAPI.getImages();
+  const imagesUrl = data.url;
+  dispatch(actions.getImagesSuccess(imagesUrl))
+}
+
 
 export default imagesReducer;

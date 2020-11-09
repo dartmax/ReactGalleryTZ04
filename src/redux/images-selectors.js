@@ -1,10 +1,10 @@
 import {createSelector} from "reselect";
 
 const getImagesSelector = (state) => {
-  return state.imagesReducer.images;
+  return state.galleryPage.images;
 }
 
-export const getUsers = createSelector(getImagesSelector,
+export const getImages = createSelector(getImagesSelector,
   (images) => {
     return images.filter(i => true);
   })

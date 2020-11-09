@@ -1,10 +1,11 @@
 import React from "react";
 import './App.css';
-import {BrowserRouter, NavLink, Redirect, Route, Switch, withRouter} from "react-router-dom";
+import {BrowserRouter, Route, Switch, withRouter} from "react-router-dom";
 import {connect, Provider} from "react-redux";
 import store from "./redux/redux-store";
 import Preloader from "./Common/Preloader";
 import {compose} from "redux";
+import GalleryAppComponent from "./components/GalerryApp"
 
 const App = (props) => {
   if (!props.initialized) {
@@ -14,7 +15,7 @@ const App = (props) => {
     <div className="App">
       <header className="App-header">
         <Switch>
-          <Route exact path='/' render={() => <GalleryApp/>}/>
+          <Route exact path='/' render={() => <GalleryAppComponent/>}/>
         </Switch>
       </header>
     </div>

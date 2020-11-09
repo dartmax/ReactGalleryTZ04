@@ -1,8 +1,8 @@
 import {instance} from './api';
 
 
-export const getImagesAPI = {
-  getImages() {
-    return instance.get(`images/`).then(res => res.data);
+export const getCommentsAPI = {
+  getComments() {
+    return instance.get(`comments/`).then(res => res.data);
   }
 };
