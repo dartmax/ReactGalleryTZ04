@@ -1,4 +1,4 @@
-import {createStore, combineReducers, applyMiddleware, compose, Action} from 'redux';
+import {createStore, combineReducers, applyMiddleware, compose} from 'redux';
 import thunkMiddleware from 'redux-thunk';
 import {reducer as formReducer} from 'redux-form'
 
@@ -9,7 +9,7 @@ import appReducer from "./app-reducer";
 let rootReducers = combineReducers({
   galleryPage: imagesReducer,
   form: formReducer,
-  app: appReducer,
+  appState: appReducer,
 });
 
 
