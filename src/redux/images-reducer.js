@@ -27,7 +27,7 @@ export const actions = {
 
 export const getImagesUrl = (file) => async (dispatch) => {
   dispatch(actions.getImagesSuccess(file));
-  const data = await getImagesAPI.getImages(file);
+  const data = await getImagesAPI.getImage(file);
   const imagesUrl = data.item;
   dispatch(actions.getImagesSuccess(imagesUrl))
 }
