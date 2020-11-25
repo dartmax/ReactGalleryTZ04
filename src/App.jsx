@@ -6,6 +6,7 @@ import store from "./redux/redux-store";
 import Preloader from "./Common/Preloader";
 import {compose} from "redux";
 import GalleryAppComponent from "./components/GalerryApp"
+import {initializeApp} from "./redux/app-reducer";
 
 const App = (props) => {
   if (!props.initialized) {
@@ -22,12 +23,12 @@ const App = (props) => {
   );
 }
 const mapStateToProps = (state) => ({
-  initialized: state.galleryPage.initialized
+  initialized: state.app.initialized
 })
 
 let AppContainer = compose(
   withRouter,
-    connect(mapStateToProps, {}))(App);
+    connect(mapStateToProps, {initializeApp}))(App);
 
 
 const GalleryApp = () => {

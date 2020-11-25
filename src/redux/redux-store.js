@@ -4,10 +4,12 @@ import {reducer as formReducer} from 'redux-form'
 
 
 import imagesReducer from './images-reducer';
+import appReducer from "./app-reducer";
 
 let rootReducers = combineReducers({
   galleryPage: imagesReducer,
   form: formReducer,
+  app: appReducer,
 });
 
 
