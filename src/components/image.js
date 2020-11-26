@@ -1,11 +1,12 @@
 import React from "react";
 
-const Image = (props) => {
+const Image = (images) => {
+  const { src, image_id } = images;
   return(
     <div>
-      <div>{props.image_id}</div>
+      <div>{image_id}</div>
       <div>
-        {props.image}
+        <img src={src} alt={image_id} />
       </div>
     </div>
   )

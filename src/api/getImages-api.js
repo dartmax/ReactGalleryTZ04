@@ -2,8 +2,8 @@ import instance from './api';
 
 
 export const getImagesAPI = {
-  getImage(item) {
-    return instance.get(`static/${item}`).then(res => res.data);
+  getImage(data) {
+    return instance.get(`/static`, data).then(res => res.data);
   }
 };
-
+debugger;

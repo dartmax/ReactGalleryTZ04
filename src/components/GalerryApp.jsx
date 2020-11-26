@@ -3,16 +3,14 @@ import {useSelector} from 'react-redux'
 import {getImages} from "../redux/images-selectors"
 import Image from "./image"
 
-const GalleryAppComponent = (props) => {
+const GalleryAppComponent = () => {
   const images = useSelector(getImages)
-
+  const { src, image_id } = images;
   return(
     <div>
       <div>Gallery App</div>
       <div>
-      {images.map(i => <Image key={i.id}
-                            image={props.image_id}
-
+      {images.map(i => <Image key={image_id[i]} image={src[i]}
       /> )}
       </div>
     </div>

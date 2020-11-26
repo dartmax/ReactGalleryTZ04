@@ -12,7 +12,7 @@ const imagesReducer = (state = initialState, action) => {
     case GET_IMAGES:
       return {
         ...state,
-        ...action.payload,
+        payload: action.data
       }
     default:
       return state;
@@ -20,16 +20,13 @@ const imagesReducer = (state = initialState, action) => {
 };
 debugger;
 export const actions = {
-  getImagesSuccess: (imagesUrl) => ({
-    type: GET_IMAGES, payload: imagesUrl
+  getImagesSuccess: (data) => ({
+    type: GET_IMAGES, data
   })
 }
 
-export const getImagesUrl = (file) => async (dispatch) => {
-  dispatch(actions.getImagesSuccess(file));
-  const data = await getImagesAPI.getImage(file);
-  const imagesUrl = data.item;
-  dispatch(actions.getImagesSuccess(imagesUrl))
+export const getImagesUrl = (data) => async (dispatch, getState) => {
+  dispatch(actions.getImagesSuccess(data));
 }
 console.log("-> getImagesUrl", getImagesUrl());
 debugger;
