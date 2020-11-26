@@ -1,17 +1,19 @@
-import React, {useEffect} from "react";
+import React, {useEffect, useState} from "react";
 import {useSelector} from 'react-redux'
 import Image from "./image"
 import {getImagesAPI} from "../api/getImages-api"
 import {getImagesUrl} from "../redux/images-reducer";
 
 const GalleryAppComponent = () => {
-  let images = useSelector(getImagesUrl)
+  let [images, setImages] = useState()
   debugger;
 
   useEffect(() => {
-    images = getImagesUrl()
+    setImages(() => {
+      images = getImagesUrl()
+    })
     console.log("-> images", images);
-  }, [images])
+  }, [])
 
 
   const { src, image_id } = images;
