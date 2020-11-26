@@ -29,5 +29,5 @@ export const initializeApp = () => (dispatch) => {
       dispatch(actions.initializedSuccess());
     })
 }
-
+debugger;
 export default appReducer;
