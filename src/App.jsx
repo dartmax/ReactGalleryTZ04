@@ -7,7 +7,7 @@ import Preloader from "./Common/Preloader";
 import {compose} from "redux";
 import GalleryAppComponent from "./components/GalerryApp"
 import {initializeApp} from "./redux/app-reducer";
-debugger;
+
 
 const App = (props) => {
   if (!props.initialized) {
@@ -26,7 +26,7 @@ const App = (props) => {
 const mapStateToProps = (state) => ({
   initialized: state.appState.initialized
 })
-debugger;
+
 let AppContainer = compose(
   withRouter,
     connect(mapStateToProps, {initializeApp}))(App);

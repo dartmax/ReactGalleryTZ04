@@ -6,4 +6,3 @@ export const getImagesAPI = {
     return instance.get(`/static`, data).then(res => res.data);
   }
 };
-debugger;

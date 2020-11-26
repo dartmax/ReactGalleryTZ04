@@ -18,7 +18,7 @@ const imagesReducer = (state = initialState, action) => {
       return state;
   }
 };
-debugger;
+
 export const actions = {
   getImagesSuccess: (data) => ({
     type: GET_IMAGES, data
@@ -26,8 +26,9 @@ export const actions = {
 }
 
 export const getImagesUrl = (data) => async (dispatch, getState) => {
+  const data = await getImagesAPI.getImage(data);
   dispatch(actions.getImagesSuccess(data));
 }
 console.log("-> getImagesUrl", getImagesUrl());
-debugger;
+
 export default imagesReducer;
