@@ -1,30 +1,36 @@
 import React, {useEffect, useState} from "react";
-import {useSelector} from 'react-redux'
+import {useDispatch, useSelector} from 'react-redux'
 import Image from "./image"
+
 import {getImagesAPI} from "../api/getImages-api"
 import {getImagesUrl} from "../redux/images-reducer";
+import {getImages} from "../redux/images-selectors";
+import {useHistory} from "react-router";
+import {Col, Row} from "antd";
 
 const GalleryAppComponent = () => {
-  let [images, setImages] = useState()
-  debugger;
+  const images = useSelector(getImages)
+
+
+  let dispatch = useDispatch()
+  const history = useHistory()
 
   useEffect(() => {
-    setImages(() => {
-      images = getImagesUrl()
-    })
-    console.log("-> images", images);
+    dispatch(getImagesUrl());
   }, [])
 
+  debugger;
 
-  const { src, image_id } = images;
-  return(
-    <div>
-      <div>Gallery App</div>
-      <div>
-      {images.map(i => <Image key={image_id[i]} image={src[i]}
-      /> )}
-      </div>
-    </div>
+  console.log("images 222", images);
+  console.log("images.image_id", images[0].image_id);
+  return (
+    <Col>
+      <Row className="px-4 mx-4 pb-4 mb-4">Gallery App</Row>
+      <Row className="d-flex">
+        {images.map(i => (<Image key={i.image_id} image_id={i.image_id} src={i.src}
+        />))}
+      </Row>
+    </Col>
   )
 }
 

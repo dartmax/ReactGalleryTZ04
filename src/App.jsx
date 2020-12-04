@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import './App.css';
 import {BrowserRouter, Route, Switch, withRouter} from "react-router-dom";
 import {connect, Provider} from "react-redux";
@@ -10,6 +10,19 @@ import {initializeApp} from "./redux/app-reducer";
 
 
 const App = (props) => {
+  const catchAllUnhandledErrors = (e) => {
+    alert("promiseRejectionEvent")
+  }
+
+  useEffect(() => {
+    props.initializeApp();
+  }, [])
+
+  useEffect(() => {
+    window.addEventListener("unhandledrejection", catchAllUnhandledErrors);
+  }, [catchAllUnhandledErrors])
+
+  debugger;
   if (!props.initialized) {
     return <Preloader/>
   }
@@ -17,19 +30,21 @@ const App = (props) => {
     <div className="App">
       <header className="App-header">
         <Switch>
-          <Route exact path='/' render={() => <GalleryAppComponent/>}/>
+          <Route exact path='*' render={() => <GalleryAppComponent props={props}/>}/>
         </Switch>
       </header>
     </div>
   );
 }
+
 const mapStateToProps = (state) => ({
   initialized: state.appState.initialized
 })
 
+
 let AppContainer = compose(
   withRouter,
-    connect(mapStateToProps, {initializeApp}))(App);
+  connect(mapStateToProps, {initializeApp}))(App);
 
 
 const GalleryApp = () => {

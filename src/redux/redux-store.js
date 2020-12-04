@@ -8,7 +8,7 @@ import appReducer from "./app-reducer";
 
 let rootReducers = combineReducers({
   galleryPage: imagesReducer,
-  // form: formReducer,
+  form: formReducer,
   appState: appReducer,
 });
 

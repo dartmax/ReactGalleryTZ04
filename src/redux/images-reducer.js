@@ -25,10 +25,10 @@ export const actions = {
   })
 }
 
-export const getImagesUrl = (imageId) => async (dispatch, getState) => {
+export const getImagesUrl = (imageId) => async (dispatch) => {
   const data = await getImagesAPI.getImage(imageId);
   console.log("-> data", data);
   dispatch(actions.getImagesSuccess(data));
 }
-debugger;
+
 export default imagesReducer;
