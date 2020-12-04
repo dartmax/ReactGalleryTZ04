@@ -22,7 +22,7 @@ const App = (props) => {
     window.addEventListener("unhandledrejection", catchAllUnhandledErrors);
   }, [catchAllUnhandledErrors])
 
-  debugger;
+
   if (!props.initialized) {
     return <Preloader/>
   }

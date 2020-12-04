@@ -5,8 +5,6 @@ const getImagesSelector = (state) => {
 }
 
 export const getImages = createSelector(getImagesSelector,
-  (images) => {
-    return images.filter(i => true);
-  })
-
-debugger;
+(images) => {
+  return images.filter(i => true);
+})

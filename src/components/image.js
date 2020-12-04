@@ -14,5 +14,5 @@ const Image = ({
     </Col>
   )
 }
-debugger;
+
 export default Image;

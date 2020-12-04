@@ -12,17 +12,15 @@ const GalleryAppComponent = () => {
   const images = useSelector(getImages)
 
 
-  let dispatch = useDispatch()
-  const history = useHistory()
+  // let dispatch = useDispatch()
+  // const history = useHistory()
 
-  useEffect(() => {
-    dispatch(getImagesUrl());
-  }, [])
-
-  debugger;
+  // useEffect(() => {
+  //   dispatch(getImagesUrl());
+  // }, [])
 
   console.log("images 222", images);
-  console.log("images.image_id", images[0].image_id);
+
   return (
     <Col>
       <Row className="px-4 mx-4 pb-4 mb-4">Gallery App</Row>
