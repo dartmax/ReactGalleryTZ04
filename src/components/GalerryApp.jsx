@@ -7,6 +7,7 @@ import {getImagesUrl} from "../redux/images-reducer";
 import {getImages} from "../redux/images-selectors";
 import {useHistory} from "react-router";
 import {Col, Row} from "antd";
+import ClockCenter from "./ClockCenter";
 
 const GalleryAppComponent = () => {
   const images = useSelector(getImages)
@@ -27,6 +28,9 @@ const GalleryAppComponent = () => {
       <Row className="d-flex">
         {images.map(i => (<Image key={i.image_id} image_id={i.image_id} src={i.src}
         />))}
+      </Row>
+      <Row>
+        <ClockCenter/>
       </Row>
     </Col>
   )
