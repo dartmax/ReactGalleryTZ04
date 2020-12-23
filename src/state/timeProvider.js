@@ -1,13 +1,9 @@
 import React, {
   createContext,
-  useCallback,
-  useLayoutEffect,
-  useRef,
-  useState
 } from "react";
 import useClock from "../utils/useClock";
 
-export const ClockContext = createContext();
+export const ClockContext = createContext({});
 
 export function ClockProvider({ children }){
   const {minutes, seconds, hours, secondAngle, minuteAngle} = useClock();

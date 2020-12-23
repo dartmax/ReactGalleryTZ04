@@ -3,7 +3,7 @@ import React from "react";
 
 const reduced = (Parent, Provider) => ({ children }) => (
   <Parent>
-    <Provider>{children}</Provider>
+    <Provider >{children}</Provider>
   </Parent>
 );
 

@@ -1,6 +1,9 @@
 .App {
-  text-align: center;
-  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .App-logo {
@@ -36,4 +39,114 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+/*.app {*/
+/*  width: 100vw;*/
+/*  height: 100vh;*/
+/*  display: flex;*/
+/*  align-items: center;*/
+/*  justify-content: center;*/
+/*}*/
+
+.clock-wrapper {
+  margin: 0 auto;
+  width: 400px;
+  height: 400px;
+  background-color: azure;
+  border: 5px solid #ff916e;
+  border-radius: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.clock-center {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  background-color: #ff916e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.time-arrow-wrapper-seconds {
+  width: 2px;
+  height: 400px;
+  position: absolute;
+}
+
+.time-arrow-wrapper-minutes {
+  width: 3px;
+  height: 350px;
+  position: absolute;
+}
+
+
+.time-arrow-wrapper-hours {
+  width: 3px;
+  height: 300px;
+  position: relative;
+}
+
+.time-arrow-seconds {
+  height: 50%;
+  background-color: #ff916e;
+}
+
+.time-arrow-minutes {
+  height: 50%;
+  background-color: #4eb35a;
+}
+
+.time-arrow-hours {
+  height: 50%;
+  background-color: black;
+  z-index: 1;
+}
+
+.clock-numbers-wrapper {
+  position: absolute;
+  right: 500px;
+  top: 200px;
+  border: 1px solid lightgrey;
+  width: 200px;
+  height: 100px;
+  font-size: 80px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.arrow-info {
+  position: absolute;
+  left: -800px;
+  top: -200px;
+  border: 1px dot-dash lightgrey;
+  width: 500px;
+  height: 100px;
+  font-size: 20px;
+  text-align: center;
+  font-weight: 600;
+  color: #c75d51;
+}
+
+.test-render {
+  position: absolute;
+  top: -400px;
+}
+
+@keyframes crescendo {
+  0%   {transform: scale(1);}
+  100% {transform: scale(1.2);}
+}
+
+.pulse {
+  animation: crescendo 0.1s alternate infinite ease-in;
+}
+
+.clock-number-wrapper {
+  text-align: center;
 }

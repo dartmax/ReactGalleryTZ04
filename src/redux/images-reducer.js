@@ -21,7 +21,8 @@ const imagesReducer = (state = initialState, action) => {
 
 export const actions = {
   getImagesSuccess: (data) => ({
-    type: GET_IMAGES, data
+    type: GET_IMAGES,
+    data
   })
 }
 

@@ -7,6 +7,8 @@ import Preloader from "./Common/Preloader";
 import {compose} from "redux";
 import GalleryAppComponent from "./components/GalerryApp"
 import {initializeApp} from "./redux/app-reducer";
+import ReduceProvider from "./state/reduceProvider";
+import providers from "./state/providers";
 
 
 const App = (props) => {
@@ -16,7 +18,7 @@ const App = (props) => {
 
   useEffect(() => {
     props.initializeApp();
-  }, [])
+  }, [props])
 
   useEffect(() => {
     window.addEventListener("unhandledrejection", catchAllUnhandledErrors);
@@ -28,11 +30,10 @@ const App = (props) => {
   }
   return (
     <div className="App">
-      <header className="App-header">
+      {/*<Header className="App-header" />*/}
         <Switch>
           <Route exact path='*' render={() => <GalleryAppComponent props={props}/>}/>
         </Switch>
-      </header>
     </div>
   );
 }
@@ -48,11 +49,15 @@ let AppContainer = compose(
 
 
 const GalleryApp = () => {
-  return <BrowserRouter>
-    <Provider store={store}>
-      <AppContainer/>
-    </Provider>
-  </BrowserRouter>
+  return (
+    <BrowserRouter>
+      <Provider store={store}>
+        <ReduceProvider providers={providers}>
+          <AppContainer/>
+        </ReduceProvider>
+      </Provider>
+    </BrowserRouter>
+  )
 }
 
 export default GalleryApp;
