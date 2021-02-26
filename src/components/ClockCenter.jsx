@@ -26,16 +26,14 @@ const ClockCenter = () => {
   const hourArrowRef = useRef();
 
   useLayoutEffect(() => { // useLayoutEffect - происходит рендер после вычисления и рендера всего элемента (СИНХРОННЫЙ ХУК)
-    return setTransform(window.getComputedStyle(secondArrowRef.current).getPropertyValue("transform"))
-  }, [seconds]) //добавляем елемент по которому происходят изменения
-
-  useLayoutEffect(() => { // useLayoutEffect - происходит рендер после вычисления и рендера всего элемента (СИНХРОННЫЙ ХУК)
-    return setTransform(window.getComputedStyle(minuteArrowRef.current).getPropertyValue("transform"))
-  }, [minutes]) //добавляем елемент по которому происходят изменения
-
-  useLayoutEffect(() => { // useLayoutEffect - происходит рендер после вычисления и рендера всего элемента (СИНХРОННЫЙ ХУК)
-    return setTransform(window.getComputedStyle(hourArrowRef.current).getPropertyValue("transform"))
-  }, [hours]) //добавляем елемент по которому происходят изменения
+    if (secondArrowRef) {
+      return setTransform(window.getComputedStyle(secondArrowRef.current).getPropertyValue("transform"))
+    } else if (minuteArrowRef) {
+      return setTransform(window.getComputedStyle(minuteArrowRef.current).getPropertyValue("transform"))
+    } else if (hourArrowRef){
+      return setTransform(window.getComputedStyle(hourArrowRef.current).getPropertyValue("transform"))
+    }
+  }, [seconds, minutes, hours]) //добавляем елемент по которому происходят изменения
 
   const handleHover = (value) => {
     console.log(value);

@@ -34,7 +34,7 @@ export default function useClock() {
         minutes: seconds > 59 ? minutes + 1 : 0,
         hours: minutes > 59 ? hours + 1 : 0,
       })
-    }, 100);
+    }, 1000);
   }, [seconds, minutes, hours]);
 
   const secondAngle = CalculateClockAngle(seconds, "seconds");
