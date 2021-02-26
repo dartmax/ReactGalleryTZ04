@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+
 html, body {
   height: 100%;
 }
@@ -69,5 +72,25 @@ html, body {
   90%, 100% {
     transform: perspective(136px) rotateY(180deg);
     opacity: 0;
+  }
+}
+
+
+.todo {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 750px;
+  height: 530px;
+  transform: translate(-50%, -50%);
+  box-shadow: 1px 2px 20px #dddddd;
+  border-radius: 10px;
+  border: 1px solid #f4f6f8;
+
+  &__sidebar{
+    background-color: #f6f6f6;
+    width: 200px;
+    height: 100%;
+    border-right: 1px solid #f1f1f1;
   }
 }

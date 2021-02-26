@@ -6,8 +6,7 @@ let initialState = {
 
 const GET_IMAGES = 'GET_IMAGES';
 
-
-const imagesReducer = (state = initialState, action) => {
+export const imagesReducer = (state = initialState, action) => {
   switch (action.type){
     case GET_IMAGES:
       return {
@@ -28,7 +27,7 @@ export const actions = {
 
 export const getImagesUrl = (imageId) => async (dispatch) => {
   const data = await getImagesAPI.getImage(imageId);
-  console.log("-> data", data);
+  console.log("---> data", data);
   dispatch(actions.getImagesSuccess(data));
 }
 

@@ -38,14 +38,11 @@ const ClockCenter = () => {
   }, [hours]) //добавляем елемент по которому происходят изменения
 
   const handleHover = (value) => {
-    alert(value);
+    console.log(value);
   };
 
   const memoHandlerHover = useCallback((value) => handleHover(value), [minutes]);
-
-
   const memoHandlerHoverHour = useCallback((value) => handleHover(value), [hours]);
-
   return (
     <div> {/*мы уже передали значение seconds в общий контекст*/}
       <div className="clock-wrapper">
@@ -60,7 +57,6 @@ const ClockCenter = () => {
 
       </div>
       <ClockRight />
-
     </div>
   )
 }

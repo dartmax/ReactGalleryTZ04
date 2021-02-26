@@ -4,6 +4,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-flow: column;
+  block-size: auto;
 }
 
 .App-logo {
@@ -18,16 +20,27 @@
 }
 
 .App-header {
+  position: relative;
   background-color: #282c34;
-  min-height: 100vh;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: calc(20px + 2vmin);
+  color: white;
+  padding: 5px;
+  font: status-bar;
+  z-index: 1000;
+  margin: 0 auto;
+}
+.App-menu {
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+  display: flex;
+  padding: 10px;
+  font-variant-caps: all-petite-caps;
   color: white;
 }
-
 .App-link {
   color: #61dafb;
 }

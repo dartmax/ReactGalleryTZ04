@@ -1,6 +1,6 @@
 import React, {useEffect} from "react";
 import './App.css';
-import {BrowserRouter, Route, Switch, withRouter} from "react-router-dom";
+import {BrowserRouter, Route, Switch, withRouter, Redirect, NavLink} from "react-router-dom";
 import {connect, Provider} from "react-redux";
 import store from "./redux/redux-store";
 import Preloader from "./Common/Preloader";
@@ -9,6 +9,9 @@ import GalleryAppComponent from "./components/GalerryApp"
 import {initializeApp} from "./redux/app-reducer";
 import ReduceProvider from "./state/reduceProvider";
 import providers from "./state/providers";
+import ClockCenter from "./components/ClockCenter";
+import ToDoList from "./components/ToDo";
+import ImageDog from "./components/ImageDog";
 
 
 const App = (props) => {
@@ -30,10 +33,42 @@ const App = (props) => {
   }
   return (
     <div className="App">
-      {/*<Header className="App-header" />*/}
+      <div className="App-header">
+        <nav>
+          <div className="App-menu">
+            <div style={{padding: '10px'}}>
+              <NavLink to="/gallery">
+                Gallery
+              </NavLink>
+            </div>
+            <div style={{padding: '10px'}}>
+              <NavLink to="/clock">
+                Clock
+              </NavLink>
+            </div>
+            <div style={{padding: '10px'}}>
+              <NavLink to="/todo">
+                ToDoList
+              </NavLink>
+            </div>
+            <div style={{padding: '10px'}}>
+              <NavLink to="/image-with-dog">
+                Pet Photo
+              </NavLink>
+            </div>
+          </div>
+        </nav>
+      </div>
+      <div style={{padding: '0 24px', minHeight: 280}}>
         <Switch>
-          <Route exact path='*' render={() => <GalleryAppComponent props={props}/>}/>
+          <Route exact path='/' render={() => <Redirect to={"/todo"}/>}/>
+          <Route path='/gallery' render={() => <GalleryAppComponent props={props}/>}/>
+          <Route path='/clock' render={() => <ClockCenter props={props}/>}/>
+          <Route path='/todo' render={() => <ToDoList props={props}/>}/>
+          <Route path='/image-with-dog' render={() => <ImageDog props={props}/>}/>
+          <Route path='*' render={() => <ToDoList props={props}/>}/>
         </Switch>
+      </div>
     </div>
   );
 }

@@ -3,7 +3,6 @@ import {useSelector} from 'react-redux'
 import Image from "./image"
 import {getImages} from "../redux/images-selectors";
 import {Col, Row} from "antd";
-import ClockCenter from "./ClockCenter";
 
 const GalleryAppComponent = () => {
   const images = useSelector(getImages)
@@ -24,9 +23,6 @@ const GalleryAppComponent = () => {
       <Row className="d-flex text-center">
         {images.map(i => (<Image key={i.image_id} src={i.src} image_id={i.image_id} alt={i.image_id}
         />))}
-      </Row>
-      <Row>
-        <ClockCenter/>
       </Row>
     </Col>
   )

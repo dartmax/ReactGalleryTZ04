@@ -5,11 +5,13 @@ import {reducer as formReducer} from 'redux-form'
 
 import imagesReducer from './images-reducer';
 import appReducer from "./app-reducer";
+import {reducerImageDog} from "./imgdog-reducer";
 
 let rootReducers = combineReducers({
   galleryPage: imagesReducer,
   form: formReducer,
   appState: appReducer,
+  reducerImageDog: reducerImageDog,
 });
 
 

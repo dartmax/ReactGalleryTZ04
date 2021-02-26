@@ -12,13 +12,11 @@ function reducer(state, action) {
   switch (action.type){
     case 'SECONDS_INCREMENT': {
       const { payload } = action;
-      let newMinutes = payload === 60 ? state.minutes + 1 : state.minutes;
-      let newHours = newMinutes === 60 ? state.hours + 1 : state.hours;
       return{
         ...state,
         seconds: payload,
-        minutes: newMinutes,
-        hours: newHours,
+        minutes: state.minutes,
+        hours: state.hours,
       }
     }
   }
@@ -26,13 +24,18 @@ function reducer(state, action) {
 
 export default function useClock() {
   const [state, dispatch] = useReducer(reducer, initialState);
-  const {seconds, minutes, hours} = state;
+  let {seconds, minutes, hours} = state;
 
   useEffect(() => {
     setTimeout(() => {
-      dispatch({type: 'SECONDS_INCREMENT', payload: seconds < 59 ? seconds +1 : 0})
+      dispatch({
+        type: 'SECONDS_INCREMENT',
+        payload: seconds < 59 ? seconds + 1 : 0,
+        minutes: seconds > 59 ? minutes + 1 : 0,
+        hours: minutes > 59 ? hours + 1 : 0,
+      })
     }, 100);
-  }, [seconds]);
+  }, [seconds, minutes, hours]);
 
   const secondAngle = CalculateClockAngle(seconds, "seconds");
   const minuteAngle = useMemo(() => {CalculateClockAngle(minutes, "minutes"
