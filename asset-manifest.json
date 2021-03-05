@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/reactGalleryTZ04/static/css/main.04516a44.chunk.css",
+    "main.js": "/reactGalleryTZ04/static/js/main.80b9d21a.chunk.js",
+    "main.js.map": "/reactGalleryTZ04/static/js/main.80b9d21a.chunk.js.map",
+    "runtime-main.js": "/reactGalleryTZ04/static/js/runtime-main.34bc98ff.js",
+    "runtime-main.js.map": "/reactGalleryTZ04/static/js/runtime-main.34bc98ff.js.map",
+    "static/css/2.2a86faee.chunk.css": "/reactGalleryTZ04/static/css/2.2a86faee.chunk.css",
+    "static/js/2.a759d90d.chunk.js": "/reactGalleryTZ04/static/js/2.a759d90d.chunk.js",
+    "static/js/2.a759d90d.chunk.js.map": "/reactGalleryTZ04/static/js/2.a759d90d.chunk.js.map",
+    "index.html": "/reactGalleryTZ04/index.html",
+    "precache-manifest.5916516b5593e78bbfc5d1379c8f3a72.js": "/reactGalleryTZ04/precache-manifest.5916516b5593e78bbfc5d1379c8f3a72.js",
+    "service-worker.js": "/reactGalleryTZ04/service-worker.js",
+    "static/css/2.2a86faee.chunk.css.map": "/reactGalleryTZ04/static/css/2.2a86faee.chunk.css.map",
+    "static/css/main.04516a44.chunk.css.map": "/reactGalleryTZ04/static/css/main.04516a44.chunk.css.map",
+    "static/js/2.a759d90d.chunk.js.LICENSE.txt": "/reactGalleryTZ04/static/js/2.a759d90d.chunk.js.LICENSE.txt",
+    "static/media/list.svg": "/reactGalleryTZ04/static/media/list.59130dc9.svg",
+    "static/media/userImages.png": "/reactGalleryTZ04/static/media/userImages.95f81f82.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.34bc98ff.js",
+    "static/css/2.2a86faee.chunk.css",
+    "static/js/2.a759d90d.chunk.js",
+    "static/css/main.04516a44.chunk.css",
+    "static/js/main.80b9d21a.chunk.js"
+  ]
+}
