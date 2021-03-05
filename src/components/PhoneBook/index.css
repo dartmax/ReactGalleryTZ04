@@ -1,0 +1,38 @@
+.width-100percent {
+    width: 100%;
+}
+.max-width-50percent {
+    max-width: 50%;
+}
+
+.app-wrapper {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+}
+
+.listgroup {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 50%;
+}
+
+.forms {
+    margin: 6px;
+    width: 90%;
+}
+
+.userimg {
+    width: 100px;
+    height: 100px;
+}
+
+.btn-add {
+    width: 100%;
+}
+
+.accordion-toggle {
+    margin: 4px;
+}

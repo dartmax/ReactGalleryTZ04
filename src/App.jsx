@@ -12,6 +12,8 @@ import providers from "./state/providers";
 import ClockCenter from "./components/ClockCenter";
 import ToDoList from "./components/ToDo";
 import ImageDog from "./components/ImageDog";
+import SmallTodo from "./components/ToDo/smallTodo";
+import PhoneBook from "./components/PhoneBook/PhoneBook";
 
 
 const App = (props) => {
@@ -56,19 +58,29 @@ const App = (props) => {
                 Pet Photo
               </NavLink>
             </div>
+            <div style={{padding: '10px'}}>
+              <NavLink to="/phonebook">
+                Phone Book
+              </NavLink>
+            </div>
+            <div style={{padding: '10px'}}>
+              <NavLink to="/smallTodo">
+                Small Todo
+              </NavLink>
+            </div>
           </div>
         </nav>
       </div>
-      <div style={{padding: '0 24px', minHeight: 280}}>
         <Switch>
           <Route exact path='/' render={() => <Redirect to={"/todo"}/>}/>
           <Route path='/gallery' render={() => <GalleryAppComponent props={props}/>}/>
           <Route path='/clock' render={() => <ClockCenter props={props}/>}/>
           <Route path='/todo' render={() => <ToDoList props={props}/>}/>
           <Route path='/image-with-dog' render={() => <ImageDog props={props}/>}/>
+          <Route path='/phonebook' render={() => <PhoneBook props={props}/>}/>
+          <Route path='/smallTodo' render={() => <SmallTodo props={props}/>}/>
           <Route path='*' render={() => <ToDoList props={props}/>}/>
         </Switch>
-      </div>
     </div>
   );
 }

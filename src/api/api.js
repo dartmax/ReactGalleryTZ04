@@ -1,13 +1,13 @@
 import axios from "axios";
+import {ArticlesFromUrl} from "./test-url/search"
 
- const instance = axios.create({
+
+export const instance = axios.create({
   baseURL: 'https://tzfrontend.herokuapp.com',
   headers: {
    "Content-type": "application/json"
   }
 });
-
-export default instance;
 
 // getImages(imageId) {
 //     console.warn('Obsolete method. Please use imageAPI object')
