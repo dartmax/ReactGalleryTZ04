@@ -12,21 +12,21 @@ const PhoneBook = () => {
   let list = { // Main idea refactoring this state like a { display: [something information for list display] contacts: [], filteredContacts: [] }
     contacts: [
       {
-        number: 89771337004,
+        number: 9165211111,
         name: "Jack",
         surName: "Gardner",
         img: defImg,
         description: "Hello, it's Jack"
       },
       {
-        number: 89165341923,
+        number: 9165222222,
         name: "Anna",
         surName: "Vattriano",
         img: defImg,
         description: "Best regards!"
       },
       {
-        number: 89534425392,
+        number: 9165233333,
         name: "Leslie",
         surName: "Gal",
         img: defImg,
@@ -38,7 +38,7 @@ const PhoneBook = () => {
   let [contacts , setContacts] = useState(list)
   let dataFilteredContacts = [];
 
-  const handleSearch = (contacts, searchTerm) => { // Need Refactoring!!! (Very Bad logic (Forgot memory))
+  const handleSearch = (contacts, searchTerm) => {
     console.log('searchTerm', searchTerm)
     console.log('contacts', contacts)
     if (contacts && searchTerm) {
