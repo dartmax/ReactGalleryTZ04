@@ -10,7 +10,7 @@ import {initializeApp} from "./redux/app-reducer";
 import ReduceProvider from "./state/reduceProvider";
 import providers from "./state/providers";
 import ClockCenter from "./components/ClockCenter";
-import ToDoList from "./components/ToDo";
+import ToDoList from "./components/bigTodoApp/ToDo";
 import ImageDog from "./components/ImageDog";
 import SmallTodo from "./components/ToDo/smallTodo";
 import PhoneBook from "./components/PhoneBook/PhoneBook";

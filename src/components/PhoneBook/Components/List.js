@@ -31,7 +31,7 @@ debugger;
   return (
     <>
     <ListGroup>
-      {input.length === 0 ? data.contacts.length === 0 ? data.contacts.push({ title: 'List is empty :(', info: 'You may fill your contact by add' }).map(i => {
+      {input.length === 0 ? data.contacts.length === 0 ? data.contacts.push({ title: 'Index is empty :(', info: 'You may fill your contact by add' }).map(i => {
         console.log(data);
           return (<ListGroup.Item>
             <div className='title'>{i.title}</div>

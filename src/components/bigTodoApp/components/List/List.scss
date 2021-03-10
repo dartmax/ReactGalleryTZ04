@@ -1,0 +1,64 @@
+.list {
+  padding-inline-start: 0;
+  list-style-type: none;
+  margin-bottom: 30px;
+  cursor: pointer;
+
+  &__add-button {
+    img{
+      vertical-align: middle;
+      width: 12px;
+      opacity: 0.6;
+    }
+    span {
+      opacity: 0.6;
+      padding-top: 1px;
+    }
+    &:hover{
+      img{
+        vertical-align: middle;
+        width: 12px;
+        opacity: 1;
+      }
+      span {
+        opacity: 1;
+        padding-top: 1px;
+      }
+    }
+  }
+
+  li {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 10px 12px;
+    margin-bottom: 5px;
+    &.active{
+      background: #fff;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+      border-radius: 4px;
+    }
+    i {
+      display: inline-flex;
+      margin-right: 8px;
+      img {
+        opacity: 0.6;
+      }
+    }
+    .badge {
+      width: 10px;
+      height: 10px;
+      border-radius: 30px;
+      position: relative;
+      &--green {
+        background-color: #42B883;
+      }
+      &--blue {
+        background-color: #64C4ED;
+      }
+      &--pink {
+        background-color: #FFBBCC;
+      }
+    }
+  }
+}

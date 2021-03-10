@@ -36,7 +36,7 @@ function SmallTodo() {
   return (
     <div className="SmallTodo">
       <div>
-        <div>Список задач: {todos.length}</div> {/*количество задач*/}
+        <div>Task scope: {todos.length}</div> {/*количество задач*/}
       </div>
       <ToDoForm addTask={addTask} /> {/*форма и передаем фукнцияю addTask*/}
       {todos.map((todo) => { /*ТОДО список*/

@@ -1,0 +1,60 @@
+.list {
+  padding-inline-start: 0;
+  list-style-type: none;
+  margin-bottom: 30px;
+  cursor: pointer;
+}
+.list__add-button img {
+  vertical-align: middle;
+  width: 12px;
+  opacity: 0.6;
+}
+.list__add-button span {
+  opacity: 0.6;
+  padding-top: 1px;
+}
+.list__add-button:hover img {
+  vertical-align: middle;
+  width: 12px;
+  opacity: 1;
+}
+.list__add-button:hover span {
+  opacity: 1;
+  padding-top: 1px;
+}
+.list li {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 10px 12px;
+  margin-bottom: 5px;
+}
+.list li.active {
+  background: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
+}
+.list li i {
+  display: inline-flex;
+  margin-right: 8px;
+}
+.list li i img {
+  opacity: 0.6;
+}
+.list li .badge {
+  width: 10px;
+  height: 10px;
+  border-radius: 30px;
+  position: relative;
+}
+.list li .badge--green {
+  background-color: #42B883;
+}
+.list li .badge--blue {
+  background-color: #64C4ED;
+}
+.list li .badge--pink {
+  background-color: #FFBBCC;
+}
+
+/*# sourceMappingURL=List.css.map */
