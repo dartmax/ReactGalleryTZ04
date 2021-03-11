@@ -41,20 +41,5 @@
 .list li i img {
   opacity: 0.6;
 }
-.list li .badge {
-  width: 10px;
-  height: 10px;
-  border-radius: 30px;
-  position: relative;
-}
-.list li .badge--green {
-  background-color: #42B883;
-}
-.list li .badge--blue {
-  background-color: #64C4ED;
-}
-.list li .badge--pink {
-  background-color: #FFBBCC;
-}
 
 /*# sourceMappingURL=List.css.map */

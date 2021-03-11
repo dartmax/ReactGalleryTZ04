@@ -1,10 +1,10 @@
-import React, {Fragment, useState} from "react";
+import React from "react";
 import List from './components/List'
 import listSvg from "../../assets/img/list.svg";
 import AddList from "./components/AddList";
+import DB from "../../assets/db/db.json"
 
 const ToDoList = () => {
-  const [state, setState] = useState('');
   return(
     <>
       <div className='todo'>
@@ -34,7 +34,7 @@ const ToDoList = () => {
           ]}
           isRemovable
           />
-        <AddList />
+        <AddList colors={DB.colors}/>
       </div>
       </div>
     </>

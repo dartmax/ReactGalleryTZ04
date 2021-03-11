@@ -1,7 +1,7 @@
 import React from "react";
 import "./List.scss"
 import classnames from "classnames";
-
+import Badge from "../../components/Badge"
 
 const List = ({items, isRemovable, click}) => {
   return(
@@ -12,7 +12,7 @@ const List = ({items, isRemovable, click}) => {
               {item.icon ? (
                 item.icon
               ) : (
-                <div className={`badge badge--${item.color}`}> </div>
+                <Badge color={item.color} />
               )}
             </i>
             <span>{item.name}</span>
