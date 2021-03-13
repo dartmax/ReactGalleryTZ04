@@ -9,31 +9,6 @@
       "id": 2,
       "name": "Front-end",
       "colorId": 4
-    },
-    {
-      "id": 3,
-      "name": "Movie and serials",
-      "colorId": 3
-    },
-    {
-      "id": 4,
-      "name": "Books",
-      "colorId": 2
-    },
-    {
-      "id": 5,
-      "name": "Main",
-      "colorId": 1
-    },
-    {
-      "name": "Sport",
-      "colorId": 3,
-      "id": 6
-    },
-    {
-      "name": "Course ReactJS ToDo",
-      "colorId": 7,
-      "id": 7
     }
   ],
   "tasks": [

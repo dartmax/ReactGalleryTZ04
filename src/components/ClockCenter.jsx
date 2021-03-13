@@ -7,6 +7,7 @@ import React, {
 import ClockRight from "./ClockRight";
 import TimeArrow from "./TimeArrow";
 import {ClockContext} from "../state/timeProvider";
+import BuggyCounter from "./bigTodoApp/components/Counter";
 
 //export const TimeContext = React.createContext({minutes: 0, seconds: 0}); // createContext/useContext - хук для передачи данных в общую область видимости
 
@@ -55,6 +56,7 @@ const ClockCenter = () => {
 
       </div>
       <ClockRight />
+      <BuggyCounter />
     </div>
   )
 }

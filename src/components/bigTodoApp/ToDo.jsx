@@ -1,10 +1,20 @@
-import React from "react";
+import React, {useState} from "react";
 import List from './components/List'
 import listSvg from "../../assets/img/list.svg";
 import AddList from "./components/AddList";
 import DB from "../../assets/db/db.json"
+import BuggyCounter from "./components/Counter";
 
 const ToDoList = () => {
+  const [lists, setLists] = useState(DB.lists.map(item => {
+    item.color = DB.colors.filter(color => color.id === item.colorId)[0].name;
+    return item
+  }));
+  const onAddList = (obj) => {
+    const prevList = [...lists, obj]
+    return setLists(prevList)
+  }
+
   return(
     <>
       <div className='todo'>
@@ -18,24 +28,12 @@ const ToDoList = () => {
             active: true
           }
         ]}/>
-          <List items={[
-            {
-              color: "green",
-              name: "Purchase"
-            },
-            {
-              color: "blue",
-              name: "Front End"
-            },
-            {
-              color: "pink",
-              name: "Movie and serials"
-            },
-          ]}
+          <List items={lists}
           isRemovable
           />
-        <AddList colors={DB.colors}/>
+        <AddList onAdd={onAddList} colors={DB.colors}/>
       </div>
+
       </div>
     </>
   )
