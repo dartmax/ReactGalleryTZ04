@@ -22,6 +22,7 @@
     "bootstrap": "^4.5.3",
     "classnames": "^2.2.6",
     "formik": "^2.1.6",
+    "json-server": "^0.16.3",
     "predeploy-builder": "^1.1.0",
     "rc-field-form": "^1.13.0",
     "react": "^16.14.0",
@@ -46,7 +47,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build",
+    "fake-json": "json-server ./src/assets/db/db.json --watch --port 4003"
   },
   "eslintConfig": {
     "extends": "react-app"

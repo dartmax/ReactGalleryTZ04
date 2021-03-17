@@ -1,0 +1,91 @@
+.tasks {
+  &__title{
+    font-family: Montserrat, serif;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 39px;
+    color: #64C4ED;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #d7d7d7;
+    &:hover{
+      img{
+        opacity: 0.2;
+      }
+    }
+    img{
+      opacity: 0;
+      cursor: pointer;
+      margin-left: 15px;
+      &:hover{
+        opacity: 0.8;
+      }
+    }
+  }
+
+  &__items{
+    margin-top: 30px;
+    margin-bottom: 15px;
+    &-row{
+      display: flex;
+      align-items: center;
+      input{
+        margin-bottom: 8px;
+        align-items: center;
+        margin-left: 15px;
+        border: 0;
+        font-size: 16px;
+        width: 100%;
+      }
+    }
+  }
+  .checkbox {
+    input{
+      display: none;
+    }
+    svg{
+      transition: opacity 0.15s ease-in-out;
+      path{
+        stroke: #fff;
+      }
+    }
+    input:checked + label {
+      background-color: #4dd599;
+      border: 2px solid #4dd599;
+      svg{
+        opacity: 1;
+        path{
+          stroke: #fff;
+        }
+      }
+    }
+
+    &:hover {
+      label{
+        background-color: #F2F2F2;
+        border: 2px solid #F2F2F2;
+        svg{
+          opacity: 1;
+          path{
+            stroke: #B2B2B2;
+          }
+        }
+      }
+    }
+    label{
+      cursor: pointer;
+      align-items: center;
+      justify-content: center;
+      display: flex;
+      border: 2px solid #e8e8e8;
+      border-radius: 30px;
+      width: 20px;
+      height: 20px;
+      transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+      svg{
+        opacity: 0;
+        position: relative;
+        left: 1px;
+      }
+    }
+  }
+}

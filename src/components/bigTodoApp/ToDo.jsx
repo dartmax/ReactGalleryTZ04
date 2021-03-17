@@ -1,15 +1,21 @@
-import React, {useState} from "react";
-import List from './components/List'
+import React, {useEffect, useState} from "react";
 import listSvg from "../../assets/img/list.svg";
-import AddList from "./components/AddList";
+import {AddList, List, Tasks} from "./components"
+import axios from "axios";
 import DB from "../../assets/db/db.json"
-import BuggyCounter from "./components/Counter";
 
 const ToDoList = () => {
   const [lists, setLists] = useState(DB.lists.map(item => {
     item.color = DB.colors.filter(color => color.id === item.colorId)[0].name;
     return item
   }));
+  // const locale = window.location.origin;
+
+  // const expandColorUrl = 'http://localhost:4003'+'/lists?_expand=color';
+  useEffect(() => {
+    axios.get('http://localhost:4003/lists?_expand=color&_embed=tasks').then(({ data }) => setLists(data))
+  }, [])
+
   const onAddList = (obj) => {
     const prevList = [...lists, obj]
     return setLists(prevList)
@@ -28,12 +34,17 @@ const ToDoList = () => {
             active: true
           }
         ]}/>
-          <List items={lists}
-          isRemovable
+          <List
+            onRemove={(id) => {
+              const newLists = lists.filter(item => item.id !== id)
+              setLists(newLists)
+            }}
+            items={lists}
+            isRemovable
           />
         <AddList onAdd={onAddList} colors={DB.colors}/>
       </div>
-
+        {lists && <Tasks list={lists[1]}/>}
       </div>
     </>
   )

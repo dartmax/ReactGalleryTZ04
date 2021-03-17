@@ -6,7 +6,6 @@ import InsertContact from "./InsertContact";
 const List = ({
   data,
   handleDelete,
-  dataFilteredContacts,
   setContacts,
 }) => {
   const uploadedImage = useRef(null);
@@ -27,7 +26,7 @@ const List = ({
       })
     }
   }
-debugger;
+
   return (
     <>
     <ListGroup>
@@ -73,5 +72,5 @@ debugger;
     </>
 )
 }
-debugger;
+
 export default List;

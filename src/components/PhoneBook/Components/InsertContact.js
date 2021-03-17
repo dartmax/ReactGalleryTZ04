@@ -68,5 +68,5 @@ const InsertContact = ({handleAdd, setInput}) => {
     </div>
   )
 }
-debugger;
+
 export default InsertContact;

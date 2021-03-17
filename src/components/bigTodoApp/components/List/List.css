@@ -28,6 +28,25 @@
   cursor: pointer;
   padding: 10px 12px;
   margin-bottom: 5px;
+  transition: background-color 0.15s ease-in-out;
+}
+.list li:hover .list__remove-icon {
+  opacity: 0.2;
+}
+.list li .list__remove-icon {
+  opacity: 0;
+  transition: opacity 0.15s ease-in-out;
+}
+.list li .list__remove-icon:hover {
+  opacity: 0.8;
+}
+.list li span {
+  flex: 1;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 160px;
+  height: 1.2em;
+  white-space: nowrap;
 }
 .list li:hover {
   background: #fff;

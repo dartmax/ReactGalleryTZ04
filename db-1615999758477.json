@@ -9,31 +9,6 @@
       "id": 2,
       "name": "Front-end",
       "colorId": 4
-    },
-    {
-      "id": 3,
-      "name": "Movie and serials",
-      "colorId": 3
-    },
-    {
-      "id": 4,
-      "name": "Books",
-      "colorId": 2
-    },
-    {
-      "id": 5,
-      "name": "WakeBoards",
-      "colorId": 1
-    },
-    {
-      "name": "Sport",
-      "colorId": 3,
-      "id": 6
-    },
-    {
-      "name": "ReactJS Course ToDo",
-      "colorId": 7,
-      "id": 7
     }
   ],
   "tasks": [
@@ -102,6 +77,30 @@
       "text": "222",
       "completed": true,
       "id": 12
+    },
+    {
+      "listId": 7,
+      "text": "Main Sidebar",
+      "completed": true,
+      "id": 15
+    },
+    {
+      "listId": 7,
+      "text": "Do All Tasks",
+      "completed": true,
+      "id": 16
+    },
+    {
+      "listId": 7,
+      "text": "Do remove and add Tasks",
+      "completed": true,
+      "id": 17
+    },
+    {
+      "listId": 8,
+      "text": "Three T",
+      "completed": false,
+      "id": 18
     }
   ],
   "colors": [

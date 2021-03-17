@@ -58,7 +58,7 @@ const PhoneBook = () => {
   }
 
 
-debugger;
+
   return (
     <div className="width-100percent">
       <NavigationBar data={contacts} handleSearch={handleSearch} />
