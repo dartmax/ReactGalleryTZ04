@@ -4,21 +4,21 @@
   margin-bottom: 30px;
   cursor: pointer;
 }
-.list__add-button img {
+.list__button img {
   vertical-align: middle;
   width: 12px;
   opacity: 0.6;
 }
-.list__add-button span {
+.list__button span {
   opacity: 0.6;
   padding-top: 1px;
 }
-.list__add-button:hover img {
+.list__button:hover img {
   vertical-align: middle;
   width: 12px;
   opacity: 1;
 }
-.list__add-button:hover span {
+.list__button:hover span {
   opacity: 1;
   padding-top: 1px;
 }
@@ -45,7 +45,6 @@
   text-overflow: ellipsis;
   overflow: hidden;
   width: 160px;
-  height: 1.2em;
   white-space: nowrap;
 }
 .list li:hover {

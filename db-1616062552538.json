@@ -27,7 +27,7 @@
     },
     {
       "name": "Sport",
-      "colorId": 1,
+      "colorId": 3,
       "id": 6
     }
   ],
@@ -97,42 +97,6 @@
       "text": "222",
       "completed": true,
       "id": 12
-    },
-    {
-      "listId": 1,
-      "text": "sdfsdf",
-      "completed": false,
-      "id": 13
-    },
-    {
-      "listId": 1,
-      "text": "sdsdv",
-      "completed": false,
-      "id": 14
-    },
-    {
-      "listId": 1,
-      "text": "asasd",
-      "completed": false,
-      "id": 15
-    },
-    {
-      "listId": 1,
-      "text": "sddsav",
-      "completed": false,
-      "id": 16
-    },
-    {
-      "listId": 3,
-      "text": "ascasc",
-      "completed": false,
-      "id": 17
-    },
-    {
-      "listId": 2,
-      "text": "ascasc",
-      "completed": false,
-      "id": 18
     }
   ],
   "colors": [

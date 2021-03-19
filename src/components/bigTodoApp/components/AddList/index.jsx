@@ -21,8 +21,8 @@ const AddListButton = ({colors, onAdd}) => {
     }
   }, [colors])
   const onClose = () => {
-    setInputValue('')
     setVisiblePopup(false)
+    setInputValue('')
     setSelectColor(colors[0].id)
   }
 
@@ -30,20 +30,25 @@ const AddListButton = ({colors, onAdd}) => {
   //   const crypto = window.crypto || window.msCrrypto;
   //   return ([1e7] + -1e3 + -4e3 + -8e3 + -1e11).replace(/[018]/g, c => ( c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(10));
   // }
-  // const listUrl = 'http://localhost:4003' + '/lists';
+  // const listUrl = 'http://localhost:4000' + '/lists';
   const addList = () => {
+    if (!inputValue) {
+      alert('Enter name of list');
+      return;
+    }
     setIsLoading(true);
-    // const setMainColor = colors.filter(color => color.id === selectColor)[0].name
     axios
-      .post('http://localhost:4003/lists', {name: inputValue, colorId: selectColor})
+      .post('http://localhost:4000/lists/', {name: inputValue, colorId: selectColor})
       .then(({data}) => {
         const colorName = colors.filter(color => color.id === selectColor)[0].name
         const listObj = {...data, color: {name: colorName}}
         onAdd(listObj)
         onClose();
-      }).catch((e) => {
-        console.log(e);
-    }).finally(() => {
+      })
+      .catch(() => {
+        console.log("Error, type some list")
+      })
+      .finally(() => {
       setIsLoading(false)
     })
   }
@@ -54,7 +59,7 @@ const AddListButton = ({colors, onAdd}) => {
         click={()=> setVisiblePopup(true)}
         items={[
         {
-          className: "list__add-button",
+          className: "list__button",
           icon: (
             <img src={addSvg} alt="Index icon" />
           ),
@@ -68,21 +73,25 @@ const AddListButton = ({colors, onAdd}) => {
              src={closeSvg} alt="close"
              className="add-list__popup-close-btn"/>
 
-        <input value={inputValue} onChange={e => setInputValue(e.target.value)} className="field" type="text" placeholder="Enter new list"/>
+        <input
+          value={inputValue}
+          onChange={e => setInputValue(e.target.value)}
+          className="field"
+          type="text"
+          placeholder="Enter new list"
+        />
 
         <div className="add-list__popup-colors">
         {colors.map(color => (
-          <>
-            <Badge
-              onClick={() => setSelectColor(color.id)}
-              key={color.id}
-              color={color.name}
-              className={selectColor === color.id && 'active'}
-            />
-          </>
+          <Badge
+            onClick={() => setSelectColor(color.id)}
+            key={color.id}
+            color={color.name}
+            className={selectColor === color.id && 'active'}
+          />
         ))}
         </div>
-        <button onClick={addList} className="add-button">{isLoading ? 'Process...' : 'Add List'}</button>
+        <button onClick={addList} className="button">{isLoading ? 'Process...' : 'Add List'}</button>
       </div>
       )}
     </div>

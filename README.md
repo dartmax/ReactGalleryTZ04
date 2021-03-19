@@ -14,9 +14,9 @@ Base CRUD (Create, Read, Update, Delete)
 - GET - Read
 - PUT - Update
 - DELETE - Delete
-- OPTIONS
+- OPTIONS - CORS
 - HEAD
-- PATCH
+- PATCH - Update for part
 - TRACE
 - CONNECT
 #### 2.Які версії HTTP-протоколу вам відомі?

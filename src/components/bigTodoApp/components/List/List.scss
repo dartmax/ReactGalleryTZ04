@@ -5,7 +5,7 @@
   margin-bottom: 30px;
   cursor: pointer;
 
-  &__add-button {
+  &__button {
     img{
       vertical-align: middle;
       width: 12px;
@@ -51,7 +51,6 @@
       text-overflow: ellipsis;
       overflow: hidden;
       width: 160px;
-      height: 1.2em;
       white-space: nowrap;
     }
     &:hover{

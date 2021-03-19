@@ -115,24 +115,39 @@ html, body {
   border-radius: 4px;
   padding: 8px 12px;
   width: 100%;
+  font-size: 14px;
 }
 .field:focus {
   border-color: #cfcfcf;
 }
 
-.add-button {
+.button {
   background: #4DD599;
   border-radius: 4px;
   color: #fff;
   border: 0;
   padding: 10px 20px;
   cursor: pointer;
+  font-size: 14px;
 }
-.add-button:hover {
+.button:hover {
   background: #31ce88;
 }
-.add-button:active {
+.button:active {
   background: #2cb97b;
+}
+.button:disabled {
+  background: #d8d8d8;
+}
+.button__grey {
+  background: #e0e0e0;
+  color: #444;
+}
+.button__grey:hover {
+  background: #d8d8d8;
+}
+.button__grey:active {
+  background: #d1d1d1;
 }
 
 /*# sourceMappingURL=main.css.map */
