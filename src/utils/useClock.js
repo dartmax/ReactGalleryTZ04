@@ -15,8 +15,8 @@ function reducer(state, action) {
       return{
         ...state,
         seconds: payload,
-        minutes: state.minutes,
-        hours: state.hours,
+        minutes: payload/60,
+        hours: payload/60/12,
       }
     }
   }
@@ -31,17 +31,15 @@ export default function useClock() {
       dispatch({
         type: 'SECONDS_INCREMENT',
         payload: seconds < 59 ? seconds + 1 : 0,
-        minutes: seconds > 59 ? minutes + 1 : 0,
-        hours: minutes > 59 ? hours + 1 : 0,
+        minutes: minutes < 59 ? minutes + 1 : 0,
+        hours: hours < 12 ? hours + 1 : 0,
       })
     }, 1000);
   }, [seconds, minutes, hours]);
 
   const secondAngle = CalculateClockAngle(seconds, "seconds");
-  const minuteAngle = useMemo(() => {CalculateClockAngle(minutes, "minutes"
-  )}, [minutes]);
-  const hoursAngle = useMemo(() => {CalculateClockAngle(hours, "hours"
-  )}, [hours]);
+  const minuteAngle = CalculateClockAngle(minutes, "minutes");
+  const hoursAngle = CalculateClockAngle(hours, "hours");
 
   return {...state, minutes, seconds, hours, secondAngle, minuteAngle, hoursAngle}
 }

@@ -1,3 +1,6 @@
+.tasks:not(:last-of-type) {
+  margin-bottom: 30px;
+}
 .tasks__title {
   font-family: Montserrat, serif;
   font-weight: bold;
@@ -60,8 +63,34 @@
 .tasks__items-row {
   display: flex;
   align-items: center;
+  margin-bottom: 15px;
 }
-.tasks__items-row input {
+.tasks__items-row:hover .tasks__items-row-actions {
+  opacity: 0.5;
+}
+.tasks__items-row-actions {
+  display: flex;
+  opacity: 0.2;
+  transition: opacity 0.15s ease-in-out;
+}
+.tasks__items-row-actions div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 25px;
+  height: 25px;
+  background-color: #c9c9c9;
+  margin-left: 5px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.tasks__items-row-actions:hover {
+  background-color: #fafafa;
+}
+.tasks__items-row-actions:hover img {
+  opacity: 1;
+}
+.tasks__items-row p {
   margin-bottom: 8px;
   align-items: center;
   margin-left: 15px;

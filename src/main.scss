@@ -87,11 +87,9 @@ html, body {
 .todo {
   display: flex;
   position: absolute;
-  left: 50%;
-  top: 50%;
+  top: 10%;
   width: 750px;
-  min-height: 530px;
-  transform: translate(-50%, -50%);
+  min-height: calc(100vh - 200px);
   box-shadow: 1px 2px 20px #dddddd;
   border-radius: 10px;
   border: 1px solid #f4f6f8;
@@ -108,6 +106,8 @@ html, body {
   &__tasks{
     flex:1;
     padding: 60px 40px 60px 40px;
+    overflow: auto;
+    max-height: 760px;
   }
 }
 

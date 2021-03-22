@@ -18,12 +18,13 @@ const AddTaskForm = ({ list, onAddTask }) => {
       completed: false,
     };
     setIsLoading(true)
+
     axios.post('http://localhost:4000/tasks/', taskObj)
       .then(({data}) => {
-      onAddTask(list.id, taskObj);
+      onAddTask(list.id, data);
       toggleFormVisible();
     }).catch(() => {
-      console.log("Error, type some text")
+      console.log("Error. Please, type some text")
     })
       .finally(() => {
       setIsLoading(false)

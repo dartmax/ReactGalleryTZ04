@@ -1,4 +1,7 @@
 .tasks {
+  &:not(:last-of-type){
+    margin-bottom: 30px;
+  }
   &__title{
     font-family: Montserrat, serif;
     font-weight: bold;
@@ -64,9 +67,37 @@
       top: 50%;
     }
     &-row{
+      $row: &;
       display: flex;
       align-items: center;
-      input{
+      margin-bottom: 15px;
+      &:hover &-actions{
+        opacity: 0.5;
+      }
+      &-actions{
+
+        display: flex;
+        opacity: 0.2;
+        transition: opacity 0.15s  ease-in-out;
+        div{
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 25px;
+          height: 25px;
+          background-color: lighten(#c4c4c4, 2%);
+          margin-left: 5px;
+          border-radius: 6px;
+          cursor: pointer;
+        }
+        &:hover{
+          background-color: darken(#ffffff, 2%);
+          img{
+            opacity: 1;
+          }
+        }
+      }
+      p{
         margin-bottom: 8px;
         align-items: center;
         margin-left: 15px;

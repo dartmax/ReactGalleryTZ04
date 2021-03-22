@@ -14,6 +14,8 @@ import ToDoList from "./components/bigTodoApp/ToDo";
 import ImageDog from "./components/ImageDog";
 import SmallTodo from "./components/ToDo/smallTodo";
 import PhoneBook from "./components/PhoneBook/PhoneBook";
+import {Tasks} from "./components/bigTodoApp/components";
+import {Link} from "@material-ui/core";
 
 
 const App = (props) => {

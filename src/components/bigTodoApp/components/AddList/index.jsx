@@ -40,8 +40,8 @@ const AddListButton = ({colors, onAdd}) => {
     axios
       .post('http://localhost:4000/lists/', {name: inputValue, colorId: selectColor})
       .then(({data}) => {
-        const colorName = colors.filter(color => color.id === selectColor)[0].name
-        const listObj = {...data, color: {name: colorName}}
+        const color = colors.filter(color => color.id === selectColor)[0]
+        const listObj = {...data, color, tasks: []}
         onAdd(listObj)
         onClose();
       })
@@ -86,7 +86,7 @@ const AddListButton = ({colors, onAdd}) => {
           <Badge
             onClick={() => setSelectColor(color.id)}
             key={color.id}
-            color={color.name}
+            color={color}
             className={selectColor === color.id && 'active'}
           />
         ))}

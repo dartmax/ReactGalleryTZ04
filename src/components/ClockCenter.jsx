@@ -29,9 +29,11 @@ const ClockCenter = () => {
   useLayoutEffect(() => { // useLayoutEffect - происходит рендер после вычисления и рендера всего элемента (СИНХРОННЫЙ ХУК)
     if (secondArrowRef) {
       return setTransform(window.getComputedStyle(secondArrowRef.current).getPropertyValue("transform"))
-    } else if (minuteArrowRef) {
+    }
+    if (minuteArrowRef) {
       return setTransform(window.getComputedStyle(minuteArrowRef.current).getPropertyValue("transform"))
-    } else if (hourArrowRef){
+    }
+    if (hourArrowRef){
       return setTransform(window.getComputedStyle(hourArrowRef.current).getPropertyValue("transform"))
     }
   }, [seconds, minutes, hours]) //добавляем елемент по которому происходят изменения

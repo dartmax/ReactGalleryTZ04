@@ -1,5 +1,6 @@
 export function CalculateClockAngle(value, type) {
   // console.log("CalculateClockAngle", value, type)
+
   let angle = 0;
   switch (type){
     case "seconds": {
@@ -18,5 +19,5 @@ export function CalculateClockAngle(value, type) {
       break;
   }
   return angle;
-
 }
+

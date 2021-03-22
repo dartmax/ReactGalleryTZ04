@@ -6,6 +6,6 @@ import useClock from "../utils/useClock";
 export const ClockContext = createContext({});
 
 export function ClockProvider({ children }){
-  const {minutes, seconds, hours, secondAngle, minuteAngle} = useClock();
-  return <ClockContext.Provider value={{minutes, seconds, hours, secondAngle, minuteAngle}}>{children}</ClockContext.Provider>
+  const {seconds, minutes, hours, secondAngle, minuteAngle, hoursAngle} = useClock();
+  return <ClockContext.Provider value={{seconds, minutes, hours, secondAngle, minuteAngle, hoursAngle}}>{children}</ClockContext.Provider>
 }
