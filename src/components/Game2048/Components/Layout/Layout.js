@@ -17,7 +17,7 @@ class Layout extends PureComponent{
 const Main = styled.main`
   align-items: center;
   position: relative;
-  top: 200px;
+  top: 100px;
   display: flex;
   height: 100%;
   justify-content: center;
