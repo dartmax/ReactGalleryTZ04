@@ -4,6 +4,7 @@ import axios from "axios";
 import AddTaskForm from "./AddTaskForm";
 import "./Tasks.scss"
 import Task from "./Task";
+import {Link} from "react-router-dom";
 
 const Tasks = ({
   list,
@@ -28,9 +29,11 @@ const Tasks = ({
 
   return (
     <div className="tasks">
-      <h2 style={{color: list.color.hex}} className="tasks__title">{list.name}
-        <img src={editSvg} alt="edit" onClick={editTitle}/>
-      </h2>
+      <Link to={`/lists/${list.id}`}>
+        <h2 style={{color: list.color.hex}} className="tasks__title">{list.name}
+          <img src={editSvg} alt="edit" onClick={editTitle}/>
+        </h2>
+      </Link>
     <div className="tasks__items">
       {!withoutEmpty && list.tasks && !list.tasks.length && <h2>No tasks in this list</h2>}
         {list.tasks && list.tasks.map(task => (

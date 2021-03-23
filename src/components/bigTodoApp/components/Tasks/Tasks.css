@@ -1,6 +1,13 @@
 .tasks:not(:last-of-type) {
   margin-bottom: 30px;
 }
+.tasks a {
+  text-decoration: none;
+  cursor: pointer;
+}
+.tasks a:hover {
+  text-decoration: none;
+}
 .tasks__title {
   font-family: Montserrat, serif;
   font-weight: bold;

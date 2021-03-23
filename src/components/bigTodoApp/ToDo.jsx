@@ -23,7 +23,6 @@ const ToDoList = () => {
 
   useEffect(() => {
     const listId = history.location.pathname.split('lists/')[1];
-    console.log(listId)
     if (lists){
       const list = lists.find(list => list.id === Number(listId))
       setActiveItem(list)
@@ -133,7 +132,6 @@ const ToDoList = () => {
         }
       ]}
       />
-        {console.log('lists', lists)}
       {lists ? (
         <List
           key={lists.id}
@@ -153,9 +151,7 @@ const ToDoList = () => {
       <AddList onAdd={onAddList} colors={colors}/>
     </div>
       <div className="todo__tasks">
-        <Switch>
-
-        <Route exext path="/todo">
+        <Route exact path="/todo">
           {lists && lists.map(list => (
             <Tasks
               key={list.id}
@@ -169,6 +165,7 @@ const ToDoList = () => {
             />
           ))}
         </Route>
+        <Route path="/lists/:id">
         {lists && activeItem && (
             <Tasks
               list={activeItem}
@@ -179,7 +176,7 @@ const ToDoList = () => {
               onCompleteTask={onCompleteTask}
             />
           )}
-        </Switch>
+        </Route>
       </div>
     </div>
   )

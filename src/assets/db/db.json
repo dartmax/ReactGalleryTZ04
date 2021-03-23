@@ -88,7 +88,7 @@
     },
     {
       "listId": 6,
-      "text": "Hello!",
+      "text": "Hello!34",
       "completed": false,
       "id": 23
     },
@@ -97,18 +97,6 @@
       "text": "New Task02",
       "completed": false,
       "id": 24
-    },
-    {
-      "listId": 1,
-      "text": "NewTask11",
-      "completed": false,
-      "id": 25
-    },
-    {
-      "listId": 2,
-      "text": "sadds",
-      "completed": true,
-      "id": 26
     }
   ],
   "colors": [

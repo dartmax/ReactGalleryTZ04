@@ -15,8 +15,6 @@ const GalleryAppComponent = () => {
   //   dispatch(getImagesUrl());
   // }, [])
 
-  console.log("images 222", images);
-
   return (
     <Col>
       <Row className="px-4 mx-4 pb-4 mb-4 text-center">Gallery App</Row>

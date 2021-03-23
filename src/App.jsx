@@ -16,6 +16,7 @@ import SmallTodo from "./components/ToDo/smallTodo";
 import PhoneBook from "./components/PhoneBook/PhoneBook";
 import {Tasks} from "./components/bigTodoApp/components";
 import {Link} from "@material-ui/core";
+import Game from "./components/Game2048/Game";
 
 
 const App = (props) => {
@@ -70,6 +71,11 @@ const App = (props) => {
                 Small Todo
               </NavLink>
             </div>
+            <div style={{padding: '10px'}}>
+              <NavLink to="/Game2048">
+                Game2048
+              </NavLink>
+            </div>
           </div>
         </nav>
       </div>
@@ -81,6 +87,7 @@ const App = (props) => {
           <Route path='/image-with-dog' render={() => <ImageDog props={props}/>}/>
           <Route path='/phonebook' render={() => <PhoneBook props={props}/>}/>
           <Route path='/smallTodo' render={() => <SmallTodo props={props}/>}/>
+          <Route path='/Game2048' render={() => <Game props={props}/>}/>
           <Route path='*' render={() => <ToDoList props={props}/>}/>
         </Switch>
     </div>

@@ -2,6 +2,13 @@
   &:not(:last-of-type){
     margin-bottom: 30px;
   }
+  a{
+    text-decoration: none;
+    cursor: pointer;
+    &:hover{
+      text-decoration: none;
+    }
+  }
   &__title{
     font-family: Montserrat, serif;
     font-weight: bold;
