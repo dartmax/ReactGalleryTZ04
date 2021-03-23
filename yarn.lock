@@ -10419,6 +10419,11 @@ map-visit@^1.0.0:
   dependencies:
     object-visit "^1.0.0"
 
+matrix-rotate@^0.0.2:
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/matrix-rotate/-/matrix-rotate-0.0.2.tgz#14555a63d67e12310042489dc06d28ad5a873365"
+  integrity sha1-FFVaY9Z+EjEAQkidwG0orVqHM2U=
+
 md5.js@^1.3.4:
   version "1.3.5"
   resolved "https://registry.yarnpkg.com/md5.js/-/md5.js-1.3.5.tgz#b5d07b8e3216e3e27cd728d72f70d1e6a342005f"

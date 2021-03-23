@@ -1,16 +1,26 @@
 import React, {Component} from "react";
 import Layout from "./Components/Layout/Layout";
 import Field from "./Components/Field/Field";
-import {initCells} from "./Logic";
+import {initCells, moveCells, directions} from "Logic";
 import ControlPanel from "./Components/ControllPanel";
 import Button from "./Components/Button";
 import Score from "./Components/Score";
+
 
 class Game extends Component{
   constructor(props) {
     super(props);
     this.state = this.getNewState()
   }
+
+  mapKeyCodeToDirection = {
+    KeyA: directions.LEFT,
+    KeyS: directions.DOWN,
+    KeyD: directions.RIGHT,
+    KeyW: directions.UP,
+
+  }
+
   newGame = () => {
     this.setState(this.getNewState())
   }
@@ -20,6 +30,22 @@ class Game extends Component{
       cells: initCells(),
       score: 0,
     }
+  }
+
+  componentDidMount() {
+    document.addEventListener('keypress', this.handleKeyPress);
+  }
+
+  componentWillUnmount() {
+    document.removeEventListener('keypress', this.handleKeyPress);
+  }
+
+  handleKeyPress = (event) => {
+    if(['KeyA', 'KeyS', 'KeyD', 'KeyW'].includes(event.code))
+    this.setState(state => ({
+      ...state,
+      cells: moveCells(state.cells, this.mapKeyCodeToDirection[event.code]),
+    }))
   }
 
   render() {
