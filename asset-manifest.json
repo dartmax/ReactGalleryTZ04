@@ -1,27 +1,33 @@
 {
   "files": {
-    "main.css": "/ReactGalleryTZ04/static/css/main.04516a44.chunk.css",
-    "main.js": "/ReactGalleryTZ04/static/js/main.30827ebf.chunk.js",
-    "main.js.map": "/ReactGalleryTZ04/static/js/main.30827ebf.chunk.js.map",
+    "main.css": "/ReactGalleryTZ04/static/css/main.c56827e7.chunk.css",
+    "main.js": "/ReactGalleryTZ04/static/js/main.0c59eedd.chunk.js",
+    "main.js.map": "/ReactGalleryTZ04/static/js/main.0c59eedd.chunk.js.map",
     "runtime-main.js": "/ReactGalleryTZ04/static/js/runtime-main.1145065d.js",
     "runtime-main.js.map": "/ReactGalleryTZ04/static/js/runtime-main.1145065d.js.map",
     "static/css/2.2a86faee.chunk.css": "/ReactGalleryTZ04/static/css/2.2a86faee.chunk.css",
-    "static/js/2.a759d90d.chunk.js": "/ReactGalleryTZ04/static/js/2.a759d90d.chunk.js",
-    "static/js/2.a759d90d.chunk.js.map": "/ReactGalleryTZ04/static/js/2.a759d90d.chunk.js.map",
+    "static/js/2.0766395f.chunk.js": "/ReactGalleryTZ04/static/js/2.0766395f.chunk.js",
+    "static/js/2.0766395f.chunk.js.map": "/ReactGalleryTZ04/static/js/2.0766395f.chunk.js.map",
     "index.html": "/ReactGalleryTZ04/index.html",
-    "precache-manifest.874ecb1d7c75ae93fcb20b1305319aa1.js": "/ReactGalleryTZ04/precache-manifest.874ecb1d7c75ae93fcb20b1305319aa1.js",
+    "precache-manifest.474511d5c2ab061653df9755411b4c81.js": "/ReactGalleryTZ04/precache-manifest.474511d5c2ab061653df9755411b4c81.js",
     "service-worker.js": "/ReactGalleryTZ04/service-worker.js",
     "static/css/2.2a86faee.chunk.css.map": "/ReactGalleryTZ04/static/css/2.2a86faee.chunk.css.map",
-    "static/css/main.04516a44.chunk.css.map": "/ReactGalleryTZ04/static/css/main.04516a44.chunk.css.map",
-    "static/js/2.a759d90d.chunk.js.LICENSE.txt": "/ReactGalleryTZ04/static/js/2.a759d90d.chunk.js.LICENSE.txt",
+    "static/css/main.c56827e7.chunk.css.map": "/ReactGalleryTZ04/static/css/main.c56827e7.chunk.css.map",
+    "static/js/2.0766395f.chunk.js.LICENSE.txt": "/ReactGalleryTZ04/static/js/2.0766395f.chunk.js.LICENSE.txt",
+    "static/media/add.svg": "/ReactGalleryTZ04/static/media/add.99e4b2eb.svg",
+    "static/media/check.svg": "/ReactGalleryTZ04/static/media/check.cb433cb6.svg",
+    "static/media/close.svg": "/ReactGalleryTZ04/static/media/close.4a2c8bc8.svg",
+    "static/media/edit.svg": "/ReactGalleryTZ04/static/media/edit.61456d77.svg",
+    "static/media/keyboard.svg": "/ReactGalleryTZ04/static/media/keyboard.e4cc8d6b.svg",
     "static/media/list.svg": "/ReactGalleryTZ04/static/media/list.59130dc9.svg",
+    "static/media/remove.svg": "/ReactGalleryTZ04/static/media/remove.79ff2195.svg",
     "static/media/userImages.png": "/ReactGalleryTZ04/static/media/userImages.95f81f82.png"
   },
   "entrypoints": [
     "static/js/runtime-main.1145065d.js",
     "static/css/2.2a86faee.chunk.css",
-    "static/js/2.a759d90d.chunk.js",
-    "static/css/main.04516a44.chunk.css",
-    "static/js/main.30827ebf.chunk.js"
+    "static/js/2.0766395f.chunk.js",
+    "static/css/main.c56827e7.chunk.css",
+    "static/js/main.0c59eedd.chunk.js"
   ]
 }
