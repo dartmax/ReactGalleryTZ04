@@ -17,7 +17,7 @@ const Tasks = ({
 }) => {
   const editTitle = () => {
     const newTitle = window.prompt('New Title', list.name);
-    if(newTitle){
+    if(newTitle && newTitle !== ''){
       onEditTitle(list.id, newTitle)
       axios.patch('http://localhost:4000/lists/' + list.id, {
         name: newTitle

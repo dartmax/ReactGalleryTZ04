@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React, {useEffect, useRef, useState} from "react";
 import listSvg from "../../assets/img/list.svg";
 import {AddList, List, Tasks} from "./components"
 import axios from "axios";
@@ -9,6 +9,7 @@ const ToDoList = () => {
   const [lists, setLists] = useState(null);
   const [colors, setColors] = useState({});
   const [activeItem, setActiveItem] = useState(null);
+  const myRef = useRef();
   // const locale = window.location.origin;
   let history = useHistory();
   // const expandColorUrl = 'http://localhost:4000'+'/lists?_expand=color';
@@ -20,6 +21,10 @@ const ToDoList = () => {
       setColors(data)
     })
   }, []);
+
+  useEffect(() => {
+    myRef.current.addEventListener("scroll", e => console.log("Scroll", e.type));
+  }, [])
 
   useEffect(() => {
     const listId = history.location.pathname.split('lists/')[1];
@@ -84,7 +89,7 @@ const ToDoList = () => {
 
   const onEditTask = (listId, taskObj) => {
     const newTaskText = window.prompt("Text of task", taskObj.text)
-    if(!newTaskText){
+    if(!newTaskText && newTaskText !== '' ){
       return;
     }
     const prevTask = lists.map(list => {
@@ -150,7 +155,7 @@ const ToDoList = () => {
       )}
       <AddList onAdd={onAddList} colors={colors}/>
     </div>
-      <div className="todo__tasks">
+      <div ref={myRef} className="todo__tasks">
         <Route exact path="/todo">
           {lists && lists.map(list => (
             <Tasks
