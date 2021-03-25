@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/ReactGalleryTZ04/static/css/main.c56827e7.chunk.css",
-    "main.js": "/ReactGalleryTZ04/static/js/main.0c59eedd.chunk.js",
-    "main.js.map": "/ReactGalleryTZ04/static/js/main.0c59eedd.chunk.js.map",
+    "main.js": "/ReactGalleryTZ04/static/js/main.f1223b7b.chunk.js",
+    "main.js.map": "/ReactGalleryTZ04/static/js/main.f1223b7b.chunk.js.map",
     "runtime-main.js": "/ReactGalleryTZ04/static/js/runtime-main.1145065d.js",
     "runtime-main.js.map": "/ReactGalleryTZ04/static/js/runtime-main.1145065d.js.map",
     "static/css/2.2a86faee.chunk.css": "/ReactGalleryTZ04/static/css/2.2a86faee.chunk.css",
     "static/js/2.0766395f.chunk.js": "/ReactGalleryTZ04/static/js/2.0766395f.chunk.js",
     "static/js/2.0766395f.chunk.js.map": "/ReactGalleryTZ04/static/js/2.0766395f.chunk.js.map",
     "index.html": "/ReactGalleryTZ04/index.html",
-    "precache-manifest.474511d5c2ab061653df9755411b4c81.js": "/ReactGalleryTZ04/precache-manifest.474511d5c2ab061653df9755411b4c81.js",
+    "precache-manifest.0024fbd84832f13f0e7c752501f2d3d6.js": "/ReactGalleryTZ04/precache-manifest.0024fbd84832f13f0e7c752501f2d3d6.js",
     "service-worker.js": "/ReactGalleryTZ04/service-worker.js",
     "static/css/2.2a86faee.chunk.css.map": "/ReactGalleryTZ04/static/css/2.2a86faee.chunk.css.map",
     "static/css/main.c56827e7.chunk.css.map": "/ReactGalleryTZ04/static/css/main.c56827e7.chunk.css.map",
@@ -28,6 +28,6 @@
     "static/css/2.2a86faee.chunk.css",
     "static/js/2.0766395f.chunk.js",
     "static/css/main.c56827e7.chunk.css",
-    "static/js/main.0c59eedd.chunk.js"
+    "static/js/main.f1223b7b.chunk.js"
   ]
 }
