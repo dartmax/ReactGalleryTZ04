@@ -37,9 +37,9 @@ export default function useClock() {
     }, 1000);
   }, [seconds, minutes, hours]);
 
-  const secondAngle = CalculateClockAngle(seconds, "seconds");
-  const minuteAngle = CalculateClockAngle(minutes, "minutes");
-  const hoursAngle = CalculateClockAngle(hours, "hours");
+  const secondAngle = useMemo(() => CalculateClockAngle(seconds, "seconds"),[seconds]);
+  const minuteAngle = useMemo(() => CalculateClockAngle(minutes, "minutes"),[minutes]);
+  const hoursAngle = useMemo(() => CalculateClockAngle(hours, "hours"),[hours]);
 
   return {...state, minutes, seconds, hours, secondAngle, minuteAngle, hoursAngle}
 }

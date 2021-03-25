@@ -18,7 +18,6 @@ class Game extends Component{
     KeyS: directions.DOWN,
     KeyD: directions.RIGHT,
     KeyW: directions.UP,
-
   }
 
   newGame = () => {
@@ -51,10 +50,12 @@ class Game extends Component{
       ...state,
       cells: removeAndIncreaseCells(state.cells),
     }))
+    await delay(150);
     this.setState(state => ({
       ...state,
       cells: populate(state.cells),
     }))
+    await delay(150);
   }
 
   render() {

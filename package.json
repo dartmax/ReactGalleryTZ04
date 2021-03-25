@@ -42,6 +42,7 @@
     "reselect": "^4.0.0",
     "sass": "^1.26.10",
     "styled-components": "^5.2.1",
+    "three": "^0.126.1",
     "typescript": "^3.8.3"
   },
   "scripts": {
