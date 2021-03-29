@@ -1,4 +1,4 @@
-import React, {useEffect} from "react";
+import React, {useCallback, useEffect} from "react";
 import './App.css';
 import {BrowserRouter, Route, Switch, withRouter, Redirect, NavLink} from "react-router-dom";
 import {connect, Provider} from "react-redux";
@@ -20,9 +20,9 @@ import Game from "./components/Game2048/Game";
 
 
 const App = (props) => {
-  const catchAllUnhandledErrors = (e) => {
-    alert("promiseRejectionEvent")
-  }
+  const catchAllUnhandledErrors = useCallback((e) => {
+    alert(`promiseRejectionEvent or add local SQL base, ${e}`)
+  }, [])
 
   useEffect(() => {
     props.initializeApp();
