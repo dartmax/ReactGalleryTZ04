@@ -72,7 +72,7 @@ const App = (props) => {
               </NavLink>
             </div>
             <div style={{padding: '10px'}}>
-              <NavLink to="/Game2048">
+              <NavLink to="/game2048">
                 Game2048
               </NavLink>
             </div>
@@ -80,14 +80,14 @@ const App = (props) => {
         </nav>
       </div>
         <Switch>
-          <Route exact path='/' render={() => <Redirect to={"/todo"}/>}/>
+          <Route exact path='/' render={() => <Redirect to={"/game2048"}/>}/>
           <Route path='/gallery' render={() => <GalleryAppComponent props={props}/>}/>
           <Route path='/clock' render={() => <ClockCenter props={props}/>}/>
           <Route path='/todo' render={() => <ToDoList props={props}/>}/>
           <Route path='/image-with-dog' render={() => <ImageDog props={props}/>}/>
           <Route path='/phonebook' render={() => <PhoneBook props={props}/>}/>
           <Route path='/smallTodo' render={() => <SmallTodo props={props}/>}/>
-          <Route path='/Game2048' render={() => <Game props={props}/>}/>
+          <Route path='/game2048' render={() => <Game props={props}/>}/>
           <Route path='*' render={() => <ToDoList props={props}/>}/>
         </Switch>
     </div>
