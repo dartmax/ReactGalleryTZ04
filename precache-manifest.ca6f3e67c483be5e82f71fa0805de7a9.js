@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "63baf84dd7a088fce93342b84180b69c",
+    "revision": "ffbeea75ec26f8a4e885e01fa93b65e1",
     "url": "/ReactGalleryTZ04/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/ReactGalleryTZ04/static/css/2.2a86faee.chunk.css"
   },
   {
-    "revision": "148140e03649794dd7d5",
+    "revision": "043a8fd7e8ca88194e6b",
     "url": "/ReactGalleryTZ04/static/css/main.c56827e7.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/ReactGalleryTZ04/static/js/2.0766395f.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "148140e03649794dd7d5",
-    "url": "/ReactGalleryTZ04/static/js/main.f1223b7b.chunk.js"
+    "revision": "043a8fd7e8ca88194e6b",
+    "url": "/ReactGalleryTZ04/static/js/main.ed178cc7.chunk.js"
   },
   {
     "revision": "12f85b0917cd8ca6863d",
