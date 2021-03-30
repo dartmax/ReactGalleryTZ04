@@ -88,7 +88,7 @@ const App = (props) => {
           <Route path='/phonebook' render={() => <PhoneBook props={props}/>}/>
           <Route path='/smallTodo' render={() => <SmallTodo props={props}/>}/>
           <Route path='/game2048' render={() => <Game props={props}/>}/>
-          <Route path='*' render={() => <ToDoList props={props}/>}/>
+          <Route path='*' render={() => <Game props={props}/>}/>
         </Switch>
     </div>
   );
