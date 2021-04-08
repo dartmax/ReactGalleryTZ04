@@ -10,18 +10,20 @@ import {initializeApp} from "./redux/app-reducer";
 import ReduceProvider from "./state/reduceProvider";
 import providers from "./state/providers";
 import ClockCenter from "./components/ClockCenter";
-import ToDoList from "./components/bigTodoApp/ToDo";
+import ToDoList from "./components/BigTodoApp/ToDo";
 import ImageDog from "./components/ImageDog";
 import SmallTodo from "./components/ToDo/smallTodo";
 import PhoneBook from "./components/PhoneBook/PhoneBook";
-import {Tasks} from "./components/bigTodoApp/components";
+import {Tasks} from "./components/BigTodoApp/components";
 import {Link} from "@material-ui/core";
 import Game from "./components/Game2048/Game";
+import MarkupOne from "./components/BootstrapMarkup/Components/MarkupOne";
+import Graphics from "./components/Graphics/Graphics";
 
 
 const App = (props) => {
   const catchAllUnhandledErrors = useCallback((e) => {
-    alert(`promiseRejectionEvent or add local SQL base, ${e}`)
+    alert(`promiseRejectionEvent or add local SQL base - json-server ./src/assets/db/db.json --watch`)
   }, [])
 
   useEffect(() => {
@@ -76,6 +78,16 @@ const App = (props) => {
                 Game2048
               </NavLink>
             </div>
+            <div style={{padding: '10px'}}>
+              <NavLink to="/markupOne">
+                MarkupOne
+              </NavLink>
+            </div>
+            <div style={{padding: '10px'}}>
+              <NavLink to="/graphics">
+                Graphics(canvas)
+              </NavLink>
+            </div>
           </div>
         </nav>
       </div>
@@ -88,6 +100,8 @@ const App = (props) => {
           <Route path='/phonebook' render={() => <PhoneBook props={props}/>}/>
           <Route path='/smallTodo' render={() => <SmallTodo props={props}/>}/>
           <Route path='/game2048' render={() => <Game props={props}/>}/>
+          <Route path='/markupOne' render={() => <MarkupOne props={props}/>}/>
+          <Route path='/graphics' render={() => <Graphics props={props}/>}/>
           <Route path='*' render={() => <Game props={props}/>}/>
         </Switch>
     </div>

@@ -27,8 +27,7 @@ function SmallTodo() {
     console.log('handleToggle id', id)
 
     setTodos([
-      ...todos.map((todo) =>
-        todo.id === id ? { ...todo, complete: !todo.complete } : {...todo } //возьмем текущий объект, скопируем его и в поле complete заменим на противоположное булево значение если нет, копируем весь элемент
+      ...todos.map((todo) => todo.id === id ? { ...todo, complete: !todo.complete } : {...todo } //возьмем текущий объект, скопируем его и в поле complete заменим на противоположное булево значение если нет, копируем весь элемент
       )
     ])
   }

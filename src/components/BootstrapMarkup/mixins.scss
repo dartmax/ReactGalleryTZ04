@@ -1,0 +1,45 @@
+@mixin grid($cols, $margin){
+  float: left;
+  background: #ce3d3d;
+  margin-right: $margin;
+  margin-bottom: $margin;
+  height: 150px;
+  @if($cols >= 5){
+    width: 100%;
+    margin-right: 0;
+  }
+  @else{
+    width: ((100%-(($cols - 1) * $margin)) / $cols);
+    margin-right: $margin;
+  }
+    &:nth-child(#{$cols}n){
+      margin-right: 0;
+  }
+}
+
+@for $i from 24 to 29{
+  .#{$someVar}-#{$i}{
+    width: 50px + $i;
+    height: 50px + $i;
+  }
+}
+
+@mixin fontOne($color: red, $fontW) {
+  font-size: $nameFontSize;
+  font-weight: $fontW;
+  color: #331a51;
+}
+@mixin link($link, $hover, $active, $visited) {
+  color: $link;
+  &:hover{
+    color: darken($link, 10%);
+  }
+  &:active{
+    color: $active;
+  }
+  @content;
+}
+
+@mixin padd($color, $padd...){
+  padding: $padd;
+}

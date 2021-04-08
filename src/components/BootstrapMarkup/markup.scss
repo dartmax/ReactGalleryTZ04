@@ -1,0 +1,72 @@
+@import "variables";
+@import "mixins";
+
+.container-first{
+  transform: translate(0, 10px);
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  @include link(silver, red, blue, green);
+
+  .header{
+    @include link(silver, red, blue, green){
+      background: #000;
+      &:visited{
+        color: #772b2b;
+      }
+    }
+  }
+}
+#grid {
+  float: left;
+  width: 100%;
+  > div{
+    @include grid(3, 15%)
+  }
+}
+
+.block:not(.first){
+  @include padd(#883600, 20px 30px);
+  background: $bgColor;
+  height: 200px;
+  border: $border;
+  width: $blockWidth;
+  margin-bottom: 20px;
+}
+#central_block{
+  padding: 30px;
+  ul {
+    list-style: none;
+    display: inline-block;
+    li {
+      float: left;
+      width: calc(100% / 3);
+      a {
+        @include fontOne(#532351, bold);
+        color: yellowgreen;
+        &:hover{
+          color: red;
+        }
+        &:before{
+          color: green;
+        }
+      }
+      a {
+        @include fontOne($color, light);
+        //color: $color
+      }
+    }
+  }
+
+}
+#central_block > ul{
+}
+.first{
+  background: $bgColor;
+  height: 100px;
+  border: $border;
+  width: $blockWidth;
+  margin-bottom: 20px;
+}
