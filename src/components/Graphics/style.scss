@@ -1,3 +1,9 @@
+@mixin clear-list{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
 .content {
   max-width: 800px;
   margin: 5rem auto;
@@ -15,4 +21,92 @@
 .canvas {
   align-items: center;
   border: 1px solid black;
+}
+
+tg-chart{
+  position: relative;
+  > canvas {
+    z-index: 2;
+  }
+  .tg-chart-slider {
+    position: relative;
+    margin-bottom: 1rem;
+    z-index: 1;
+    &__right,
+    &__left {
+      transition: background 0.22s ease-in-out;
+      background: #f5f9fb;
+      opacity: 0.8;
+      position: absolute;
+      top: 0;
+    }
+    &__left {
+      left: 0;
+    }
+    &__right{
+      right: 0;
+    }
+    &__arrow--left,
+    &__arrow--right{
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      transition: background 0.22s ease-in-out;
+      background: #ddeaf3;
+      width: 4px;
+    }
+    &__arrow--left{
+      right: 0;
+      cursor: w-resize;
+    }
+    &__arrow--right {
+      left: 0;
+      cursor: w-resize;
+    }
+    &__window {
+      position: absolute;
+      background: transparent;
+      top: 0;
+      bottom: 0;
+    }
+  }
+  .top-chart-tooltip {
+    position: absolute;
+    display: none;
+    max-width: 200px;
+    min-width: 120px;
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: 1px solid dfe6eb;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.05);
+    background: #fff;
+    color: #000;
+    overflow: hidden;
+    z-index: 3;
+    top: 50px;
+    left: 100px;
+    .tooltip-title{
+      text-align: center;
+      margin-bottom: 0.5rem;
+      white-space: nowrap;
+    }
+    .tooltip-list{
+      display: flex;
+      flex-wrap: wrap;
+      @include clear-list;
+    }
+    .tooltip-list-item{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      flex-grow: 1;
+      .name{
+        font-size: 0.8rem;
+      }
+      .value{
+        font-size: 1rem;
+        font-weight: bold;
+      }
+    }
+  }
 }
