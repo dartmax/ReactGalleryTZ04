@@ -1,6 +1,12 @@
 import React, {useEffect} from "react";
 import {useRef} from "react";
-import {computeBoundaries} from "./Helpers";
+import {
+  toDate,
+  isOver,
+  line,
+  circle,
+  computeBoundaries
+} from "./utils";
 
 const WIDTH = 600
 const HEIGHT = 200
@@ -10,31 +16,11 @@ const DPI_HEIGHT = HEIGHT * 2
 const VIEW_HEIGHT = DPI_HEIGHT - PADDING * 2
 const VIEW_WIDTH = DPI_WIDTH
 const ROWS_COUNT = 5
-const CIRCLE_RADIUS = 8
 
 const Chart = ({data}) => {
   const canvasRef = useRef(null)
   console.log('getCharData', data);
   let raf
-
-  function isOver(mouse, x, length) {
-    if(!mouse){
-      return false
-    }
-    const width = DPI_WIDTH / length
-    return Math.abs(x - mouse.x) < width / 2
-  }
-
-  function line(ctx, coords, {color}){
-    ctx.beginPath()
-    ctx.lineWidth = 4
-    ctx.strokeStyle = color
-    for (const [x, y] of coords) {
-      ctx.lineTo(x, y)
-    }
-    ctx.stroke()
-    ctx.closePath()
-  }
 
   function yAxis(ctx, yMin, yMax) {
     const step = VIEW_HEIGHT / ROWS_COUNT
@@ -67,7 +53,7 @@ const Chart = ({data}) => {
         ctx.fillText(text.toString(), x, DPI_HEIGHT - 10)
       }
 
-      if(isOver(mouse, x, data.length)){
+      if(isOver(mouse, x, data.length, DPI_WIDTH)){
         ctx.save()
         ctx.moveTo(x, PADDING)
         ctx.lineTo(x, DPI_HEIGHT - PADDING)
@@ -84,36 +70,6 @@ const Chart = ({data}) => {
       Math.floor(DPI_HEIGHT - PADDING - y * yRatio),
     ]).filter((_, i) => i !== 0)
   }
-
-  function circle(ctx, [x, y], color){
-    ctx.beginPath()
-    ctx.strokeStyle = color
-    ctx.fillStyle = "#fff"
-    ctx.arc(x, y, CIRCLE_RADIUS, 0, Math.PI *2)
-    ctx.fill()
-    ctx.stroke()
-    ctx.closePath()
-  }
-
-  function toDate(timestamp) {
-    const shortMonths = [
-      'Jan',
-      'Feb',
-      'Mar',
-      'Apr',
-      'May',
-      'Jun',
-      'Jul',
-      'Aug',
-      'Sep',
-      'Oct',
-      'Nov',
-      'Dec',
-    ]
-    const date = new Date(timestamp)
-    return `${shortMonths[date.getMonth()]} ${date.getDate()}`
-  }
-
 
   useEffect(() => {
     const canvas = canvasRef.current
@@ -146,7 +102,7 @@ const Chart = ({data}) => {
         line(ctx, coords, {color})
 
         for (const [x, y] of coords) {
-          if(isOver(proxy.mouse, x, coords.length)){
+          if(isOver(proxy.mouse, x, coords.length, DPI_WIDTH)){
             circle(ctx, [x, y], color)
             break
           }
