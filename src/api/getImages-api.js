@@ -13,7 +13,7 @@ export const fetchTodo = (id = 1) =>{
     .then(json => json)
 }
 (async () => {
-  for await (let res of[1, 14, 20].map(n => fetchTodo(n))) {
+  for await (let res of [1, 14, 20].map(n => fetchTodo(n))) {
     console.log(res);
   }
 })()

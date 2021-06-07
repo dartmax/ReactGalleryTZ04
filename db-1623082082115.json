@@ -1,0 +1,155 @@
+{
+  "lists": [
+    {
+      "id": 1,
+      "name": "Purchase10",
+      "colorId": 5
+    },
+    {
+      "id": 2,
+      "name": "Front-end",
+      "colorId": 4
+    },
+    {
+      "id": 3,
+      "name": "Movie and serials",
+      "colorId": 3
+    },
+    {
+      "id": 4,
+      "name": "Books",
+      "colorId": 2
+    },
+    {
+      "id": 5,
+      "name": "WakeBoards",
+      "colorId": 1
+    },
+    {
+      "name": "Sport",
+      "colorId": 1,
+      "id": 6
+    },
+    {
+      "name": "Fetch01",
+      "colorId": 8,
+      "id": 7
+    }
+  ],
+  "tasks": [
+    {
+      "id": 1,
+      "listId": 2,
+      "text": "Learn JavaScript",
+      "completed": true
+    },
+    {
+      "id": 2,
+      "listId": 2,
+      "text": "Learn Patterns JS",
+      "completed": true
+    },
+    {
+      "id": 3,
+      "listId": 2,
+      "text": "ReactJS Hooks (useState, useReducer, useEffect ets.)",
+      "completed": false
+    },
+    {
+      "listId": 1,
+      "text": "Hello World",
+      "completed": true,
+      "id": 7
+    },
+    {
+      "listId": 1,
+      "text": "Qwerty type",
+      "completed": false,
+      "id": 8
+    },
+    {
+      "listId": 4,
+      "text": "Buy 1984!",
+      "completed": true,
+      "id": 10
+    },
+    {
+      "listId": 3,
+      "text": "ascasc",
+      "completed": false,
+      "id": 17
+    },
+    {
+      "listId": 4,
+      "text": "Jack",
+      "completed": false,
+      "id": 21
+    },
+    {
+      "listId": 6,
+      "text": "Hello!34",
+      "completed": false,
+      "id": 23
+    },
+    {
+      "listId": 1,
+      "text": "New Task02",
+      "completed": false,
+      "id": 24
+    },
+    {
+      "listId": 1,
+      "text": "Hello Num 03",
+      "completed": false,
+      "id": 25
+    },
+    {
+      "listId": 7,
+      "text": "interceptor1",
+      "completed": false,
+      "id": 26
+    }
+  ],
+  "colors": [
+    {
+      "id": 1,
+      "hex": "#C9D1D3",
+      "name": "grey"
+    },
+    {
+      "id": 2,
+      "hex": "#42B883",
+      "name": "green"
+    },
+    {
+      "id": 3,
+      "hex": "#64C4ED",
+      "name": "blue"
+    },
+    {
+      "id": 4,
+      "hex": "#FFBBCC",
+      "name": "pink"
+    },
+    {
+      "id": 5,
+      "hex": "#B6E6BD",
+      "name": "lime"
+    },
+    {
+      "id": 6,
+      "hex": "#C355F5",
+      "name": "purple"
+    },
+    {
+      "id": 7,
+      "hex": "#110133",
+      "name": "black"
+    },
+    {
+      "id": 8,
+      "hex": "#FF6464",
+      "name": "red"
+    }
+  ]
+}

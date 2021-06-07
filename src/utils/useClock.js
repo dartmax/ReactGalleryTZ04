@@ -15,8 +15,20 @@ function reducer(state, action) {
       return{
         ...state,
         seconds: payload,
-        minutes: payload/60,
-        hours: payload/60/12,
+      }
+    }
+    case 'MINUTES_INCREMENT': {
+      const { payload } = action;
+      return{
+        ...state,
+        minutes: payload,
+      }
+    }
+    case 'HOURS_INCREMENT': {
+      const { payload } = action;
+      return{
+        ...state,
+        hours: payload,
       }
     }
   }
@@ -31,10 +43,24 @@ export default function useClock() {
       dispatch({
         type: 'SECONDS_INCREMENT',
         payload: seconds < 59 ? seconds + 1 : 0,
-        minutes: minutes < 59 ? minutes + 1 : 0,
-        hours: hours < 12 ? hours + 1 : 0,
       })
     }, 1000);
+    if (seconds === 59){
+      setTimeout(() => {
+        dispatch({
+        type: 'MINUTES_INCREMENT',
+        payload: minutes < 59 ? minutes + 1 : 0,
+      })
+    }, 1000);
+      if (minutes === 59){
+        setTimeout(() => {
+          dispatch({
+            type: 'HOURS_INCREMENT',
+            payload: hours < 12 ? hours + 1 : 0,
+          })
+        }, 1000);
+      }
+    }
   }, [seconds, minutes, hours]);
 
   const secondAngle = useMemo(() => CalculateClockAngle(seconds, "seconds"),[seconds]);

@@ -5,7 +5,7 @@ import LiqPay from "./liqpay.js";
 //configure a JWT auth client
 const fieldId = "10iNuKCWIhLG9jbDo9IcLGEz6wD4IeqB3ZTCS_sPCiHA"
 
-export async function shareDocumentWithStudent(fileId){
+export async function shareDocumentWithStudent(fieldId){
 
   let jwtClient = new google.auth.JWT(
     creds.client_email,

@@ -25,7 +25,7 @@ const user = {
   age: 23
 }
 
-setProperty = (name, value) => { // vrong name
+setProperty = (name, value) => { // wrong name
   if(!user[name]){
     return false;
   }

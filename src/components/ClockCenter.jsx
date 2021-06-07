@@ -49,8 +49,8 @@ const ClockCenter = () => {
       <div className="clock-wrapper">
         <div className="clock-center">
           <TimeArrow ref={secondArrowRef} angle={secondAngle} type='seconds'/>
-          <TimeArrow ref={minuteArrowRef} handleHover={memoHandlerHover} angle={minuteAngle} type='minutes'/>
-          <TimeArrow ref={hourArrowRef} handleHover={memoHandlerHoverHour} angle={hoursAngle} type='hours'/>
+          <TimeArrow ref={minuteArrowRef} handleHover={(value) => memoHandlerHover(value)} angle={minuteAngle} type='minutes'/>
+          <TimeArrow ref={hourArrowRef} handleHover={(value) => memoHandlerHoverHour(value)} angle={hoursAngle} type='hours'/>
           <div className="arrow-info">
             {transform}
           </div>
