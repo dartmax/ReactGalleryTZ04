@@ -4,7 +4,11 @@ const TimeArrow = React.forwardRef(({type, angle, handleHover, memoHandlerHover,
   return(
     <div 
       onMouseEnter={() => {
-        handleHover && handleHover(value) && memoHandlerHover(value) && memoHandlerHoverHour(value)}}
+        handleHover && 
+        handleHover(value) && 
+        memoHandlerHover(value) && 
+        memoHandlerHoverHour(value)
+      }}
       ref={ref}
       className={`time-arrow-wrapper-${type}`}
       style={{transform: `rotate(${angle}deg)`}} 
